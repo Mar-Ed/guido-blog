@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" fill="none">
+  <rect width="240" height="60" rx="8" fill="transparent"/>
+  <!-- Modern Geometric Furniture / Chair Icon -->
+  <g transform="translate(10, 8)">
+    <rect x="2" y="2" width="40" height="40" rx="10" fill="#2563eb" fill-opacity="0.1"/>
+    <path d="M14 14C14 12.8954 14.8954 12 16 12H28C29.1046 12 30 12.8954 30 14V26H14V14Z" fill="#1e3a8a"/>
+    <path d="M10 26C10 24.8954 10.8954 24 12 24H32C33.1046 24 34 24.8954 34 26V29C34 30.1046 33.1046 31 32 31H12C10.8954 31 10 30.1046 10 29V26Z" fill="#2563eb"/>
+    <rect x="13" y="31" width="3" height="9" rx="1.5" fill="#d97706"/>
+    <rect x="28" y="31" width="3" height="9" rx="1.5" fill="#d97706"/>
+  </g>
+  <!-- Text -->
+  <text x="62" y="28" font-family="'Inter', sans-serif" font-size="16" font-weight="800" fill="#0f172a" letter-spacing="-0.5">INVERSIONES GUIDO</text>
+  <text x="62" y="44" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#64748b" letter-spacing="1">MUEBLES &bull; VILLA EL SALVADOR</text>
+</svg>

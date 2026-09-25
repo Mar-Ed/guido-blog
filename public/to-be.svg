@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 480" width="100%" height="100%" style="background-color: #ffffff;">
+  <defs>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2563eb" />
+    </marker>
+    <filter id="cardShadowBlue" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#2563eb" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Title & Subtitle -->
+  <rect x="20" y="20" width="880" height="440" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="50" y="55" font-family="'Inter', sans-serif" font-size="18" font-weight="800" fill="#0f172a">FLUJO DE PROCESO OPTIMIZADO: SISTEMA CENTRALIZADO DE GESTIÓN (TO-BE)</text>
+  <text x="50" y="75" font-family="'Inter', sans-serif" font-size="12" font-weight="600" fill="#2563eb">Arquitectura Relacional SQL Server • Cero Papel • Trazabilidad de Clientes y Control en Tiempo Real</text>
+
+  <!-- Step 1: ATENCIÓN DIGITAL -->
+  <rect x="50" y="100" width="220" height="95" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5" filter="url(#cardShadowBlue)"/>
+  <rect x="50" y="100" width="220" height="26" rx="8" fill="#eff6ff"/>
+  <text x="65" y="118" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#1e40af">1. CONSULTA & CRM</text>
+  <text x="65" y="145" font-family="'Inter', sans-serif" font-size="11" fill="#1e293b">Vendedor busca cliente en sistema</text>
+  <text x="65" y="162" font-family="'Inter', sans-serif" font-size="11" fill="#1e293b">Historial de compras y preferencias</text>
+  <text x="65" y="178" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#2563eb">Atención rápida y personalizada</text>
+
+  <!-- Arrow 1 to Central BD -->
+  <line x1="270" y1="145" x2="330" y2="145" stroke="#2563eb" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <!-- Step 2: NÚCLEO SQL SERVER -->
+  <rect x="340" y="90" width="240" height="115" rx="10" fill="#1e3a8a" stroke="#2563eb" stroke-width="2" filter="url(#cardShadowBlue)"/>
+  <text x="460" y="118" font-family="'Inter', sans-serif" font-size="12" font-weight="800" fill="#ffffff" text-anchor="middle">2. MOTOR SQL SERVER</text>
+  <text x="460" y="136" font-family="'Inter', sans-serif" font-size="10" font-weight="500" fill="#93c5fd" text-anchor="middle">Base de Datos Centralizada</text>
+  <line x1="360" y1="145" x2="560" y2="145" stroke="#3b82f6" stroke-width="1"/>
+  <text x="460" y="162" font-family="'Inter', sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">✓ Validación de Stock Instantánea</text>
+  <text x="460" y="178" font-family="'Inter', sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">✓ Catálogo y Precios Oficiales</text>
+  <text x="460" y="193" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#34d399" text-anchor="middle">Transacciones ACID Seguras</text>
+
+  <!-- Arrow 2 to Step 3 -->
+  <line x1="580" y1="145" x2="640" y2="145" stroke="#2563eb" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <!-- Step 3: VENTA Y FACTURACIÓN DIGITAL -->
+  <rect x="650" y="100" width="220" height="95" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5" filter="url(#cardShadowBlue)"/>
+  <rect x="650" y="100" width="220" height="26" rx="8" fill="#eff6ff"/>
+  <text x="665" y="118" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#1e40af">3. FACTURACIÓN DIGITAL</text>
+  <text x="665" y="145" font-family="'Inter', sans-serif" font-size="11" fill="#1e293b">Generación automática de orden</text>
+  <text x="665" y="162" font-family="'Inter', sans-serif" font-size="11" fill="#1e293b">Comprobante electrónico</text>
+  <text x="665" y="178" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#059669">0% consumo de papel físico</text>
+
+  <!-- Downward Arrow from 3 to 4 -->
+  <path d="M760 195 L760 230 L760 260" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <!-- Step 4: ACTUALIZACIÓN AUTOMÁTICA DE STOCK -->
+  <rect x="650" y="270" width="220" height="95" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5" filter="url(#cardShadowBlue)"/>
+  <rect x="650" y="270" width="220" height="26" rx="8" fill="#eff6ff"/>
+  <text x="665" y="288" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#1e40af">4. KARDEX AUTOMÁTICO</text>
+  <text x="665" y="315" font-family="'Inter', sans-serif" font-size="11" fill="#1e293b">Descuento de stock en almacén</text>
+  <text x="665" y="332" font-family="'Inter', sans-serif" font-size="11" fill="#1e293b">Alerta de reposición oportuna</text>
+  <text x="665" y="348" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#059669">Sin quiebres ni sobrestock</text>
+
+  <!-- Left Arrow from 4 to 5 -->
+  <line x1="650" y1="315" x2="590" y2="315" stroke="#2563eb" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <!-- Step 5: LOGÍSTICA & DESPACHO INTELIGENTE -->
+  <rect x="340" y="270" width="240" height="95" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5" filter="url(#cardShadowBlue)"/>
+  <rect x="340" y="270" width="240" height="26" rx="8" fill="#eff6ff"/>
+  <text x="355" y="288" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#1e40af">5. DESPACHO & RUTAS</text>
+  <text x="355" y="315" font-family="'Inter', sans-serif" font-size="11" fill="#1e293b">Programación y optimización vial</text>
+  <text x="355" y="332" font-family="'Inter', sans-serif" font-size="11" fill="#1e293b">Control de estado e inspección</text>
+  <text x="355" y="348" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#059669">Reducción de huella de carbono</text>
+
+  <!-- Left Arrow from 5 to 6 -->
+  <line x1="340" y1="315" x2="280" y2="315" stroke="#2563eb" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <!-- Step 6: SATISFACCIÓN Y POSTVENTA -->
+  <rect x="50" y="270" width="220" height="95" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5" filter="url(#cardShadowBlue)"/>
+  <rect x="50" y="270" width="220" height="26" rx="8" fill="#eff6ff"/>
+  <text x="65" y="288" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#1e40af">6. CLIENTE SATISFECHO</text>
+  <text x="65" y="315" font-family="'Inter', sans-serif" font-size="11" fill="#1e293b">Entrega a tiempo en perfecto estado</text>
+  <text x="65" y="332" font-family="'Inter', sans-serif" font-size="11" fill="#1e293b">Canal de postventa y encuestas</text>
+  <text x="65" y="348" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#2563eb">Fidelización continua</text>
+
+  <!-- Bottom Success Banner -->
+  <rect x="50" y="390" width="820" height="50" rx="8" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1"/>
+  <text x="70" y="412" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#065f46">BENEFICIOS LOGRADOS CON LA BASE DE DATOS:</text>
+  <text x="70" y="428" font-family="'Inter', sans-serif" font-size="11" fill="#047857">Precisión del 100% en inventario &bull; Despachos trazables &bull; Ahorro significativo de costos de papel &bull; Toma de decisiones gerenciales basada en datos.</text>
+</svg>

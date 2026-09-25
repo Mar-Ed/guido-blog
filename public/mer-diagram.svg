@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 460" width="100%" height="100%" style="background-color: #ffffff;">
+  <defs>
+    <filter id="shadowTable" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect x="10" y="10" width="900" height="440" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="35" y="45" font-family="'Inter', sans-serif" font-size="16" font-weight="800" fill="#0f172a">DIAGRAMA ENTIDAD - RELACIÓN (MER) • BASE DE DATOS INVERSIONES GUIDO</text>
+  <text x="35" y="65" font-family="'Inter', sans-serif" font-size="11" font-weight="500" fill="#64748b">Implementación SQL Server • Claves Primarias (PK) y Foráneas (FK) Centralizadas</text>
+
+  <!-- TABLE: STORES -->
+  <g transform="translate(35, 90)" filter="url(#shadowTable)">
+    <rect width="160" height="110" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+    <rect width="160" height="26" rx="6" fill="#1e3a8a"/>
+    <text x="12" y="18" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#ffffff">STORES (Tiendas/Almacén)</text>
+    <text x="12" y="44" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#2563eb">🔑 store_id (PK)</text>
+    <text x="12" y="62" font-family="'Inter', sans-serif" font-size="10" fill="#475569">store_name</text>
+    <text x="12" y="78" font-family="'Inter', sans-serif" font-size="10" fill="#475569">phone / email</text>
+    <text x="12" y="94" font-family="'Inter', sans-serif" font-size="10" fill="#475569">street / city</text>
+  </g>
+
+  <!-- TABLE: USERS -->
+  <g transform="translate(35, 240)" filter="url(#shadowTable)">
+    <rect width="160" height="120" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+    <rect width="160" height="26" rx="6" fill="#1e3a8a"/>
+    <text x="12" y="18" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#ffffff">USERS (Empleados)</text>
+    <text x="12" y="44" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#2563eb">🔑 user_id (PK)</text>
+    <text x="12" y="62" font-family="'Inter', sans-serif" font-size="10" fill="#475569">first_name / last_name</text>
+    <text x="12" y="78" font-family="'Inter', sans-serif" font-size="10" fill="#475569">email / phone</text>
+    <text x="12" y="94" font-family="'Inter', sans-serif" font-size="10" fill="#d97706">🔗 store_id (FK)</text>
+    <text x="12" y="108" font-family="'Inter', sans-serif" font-size="10" fill="#475569">active (bit)</text>
+  </g>
+
+  <!-- TABLE: CUSTOMERS -->
+  <g transform="translate(250, 90)" filter="url(#shadowTable)">
+    <rect width="170" height="130" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+    <rect width="170" height="26" rx="6" fill="#1e3a8a"/>
+    <text x="12" y="18" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#ffffff">CUSTOMERS (Clientes)</text>
+    <text x="12" y="44" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#2563eb">🔑 customer_id (PK)</text>
+    <text x="12" y="62" font-family="'Inter', sans-serif" font-size="10" fill="#475569">first_name / last_name</text>
+    <text x="12" y="78" font-family="'Inter', sans-serif" font-size="10" fill="#475569">phone / email</text>
+    <text x="12" y="94" font-family="'Inter', sans-serif" font-size="10" fill="#475569">street / city (VES)</text>
+    <text x="12" y="110" font-family="'Inter', sans-serif" font-size="10" fill="#475569">preferences_notes</text>
+  </g>
+
+  <!-- TABLE: ORDERS -->
+  <g transform="translate(480, 90)" filter="url(#shadowTable)">
+    <rect width="180" height="145" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+    <rect width="180" height="26" rx="6" fill="#2563eb"/>
+    <text x="12" y="18" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#ffffff">ORDERS (Pedidos/Ventas)</text>
+    <text x="12" y="44" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#2563eb">🔑 order_id (PK)</text>
+    <text x="12" y="62" font-family="'Inter', sans-serif" font-size="10" fill="#d97706">🔗 customer_id (FK)</text>
+    <text x="12" y="78" font-family="'Inter', sans-serif" font-size="10" fill="#475569">order_status</text>
+    <text x="12" y="94" font-family="'Inter', sans-serif" font-size="10" fill="#475569">order_date / required_date</text>
+    <text x="12" y="110" font-family="'Inter', sans-serif" font-size="10" fill="#475569">shipped_date</text>
+    <text x="12" y="126" font-family="'Inter', sans-serif" font-size="10" fill="#d97706">🔗 store_id / user_id (FK)</text>
+  </g>
+
+  <!-- TABLE: ORDER_ITEMS -->
+  <g transform="translate(710, 90)" filter="url(#shadowTable)">
+    <rect width="170" height="130" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+    <rect width="170" height="26" rx="6" fill="#2563eb"/>
+    <text x="12" y="18" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#ffffff">ORDER_ITEMS (Detalle)</text>
+    <text x="12" y="44" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#2563eb">🔑🔗 order_id (PK, FK)</text>
+    <text x="12" y="62" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#2563eb">🔑 item_id (PK)</text>
+    <text x="12" y="78" font-family="'Inter', sans-serif" font-size="10" fill="#d97706">🔗 product_id (FK)</text>
+    <text x="12" y="94" font-family="'Inter', sans-serif" font-size="10" fill="#475569">quantity</text>
+    <text x="12" y="110" font-family="'Inter', sans-serif" font-size="10" fill="#475569">list_price / discount</text>
+  </g>
+
+  <!-- TABLE: CATEGORIES -->
+  <g transform="translate(480, 280)" filter="url(#shadowTable)">
+    <rect width="180" height="90" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+    <rect width="180" height="26" rx="6" fill="#1e3a8a"/>
+    <text x="12" y="18" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#ffffff">CATEGORIES (Líneas)</text>
+    <text x="12" y="44" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#2563eb">🔑 category_id (PK)</text>
+    <text x="12" y="62" font-family="'Inter', sans-serif" font-size="10" fill="#475569">category_name</text>
+    <text x="12" y="76" font-family="'Inter', sans-serif" font-size="9" fill="#64748b">(Salas, Comedores, Dormitorios)</text>
+  </g>
+
+  <!-- TABLE: PRODUCTS -->
+  <g transform="translate(710, 260)" filter="url(#shadowTable)">
+    <rect width="170" height="130" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+    <rect width="170" height="26" rx="6" fill="#1e3a8a"/>
+    <text x="12" y="18" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#ffffff">PRODUCTS (Muebles)</text>
+    <text x="12" y="44" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#2563eb">🔑 product_id (PK)</text>
+    <text x="12" y="62" font-family="'Inter', sans-serif" font-size="10" fill="#475569">product_name</text>
+    <text x="12" y="78" font-family="'Inter', sans-serif" font-size="10" fill="#d97706">🔗 category_id (FK)</text>
+    <text x="12" y="94" font-family="'Inter', sans-serif" font-size="10" fill="#475569">model_year</text>
+    <text x="12" y="110" font-family="'Inter', sans-serif" font-size="10" fill="#475569">list_price (PEN S/.)</text>
+  </g>
+
+  <!-- RELATION CONNECTORS -->
+  <path d="M420 150 L480 150" stroke="#2563eb" stroke-width="2" stroke-dasharray="4 2"/>
+  <path d="M660 150 L710 150" stroke="#2563eb" stroke-width="2"/>
+  <path d="M795 220 L795 260" stroke="#2563eb" stroke-width="2"/>
+  <path d="M660 325 L710 325" stroke="#2563eb" stroke-width="2" stroke-dasharray="4 2"/>
+</svg>
