@@ -47,3 +47,15 @@ npm run dev
 ```
 
 El portal estará disponible en `http://localhost:3000`.
+
+---
+
+## 👥 Equipo Formulador de Proyecto (UNTELS)
+
+| Integrante | Código de Estudiante | Correo Institucional |
+| :--- | :---: | :--- |
+| **Benjamín Adriano Chipana Bandera** | `2223110329` | [2223110329@untels.edu.pe](mailto:2223110329@untels.edu.pe) |
+| **Xavier Diego Zegarra Ortega** | `2113110140` | [2113110140@untels.edu.pe](mailto:2113110140@untels.edu.pe) |
+| **Alfaro Mendoza José Luis** | `2223080086` | [2223080086@untels.edu.pe](mailto:2223080086@untels.edu.pe) |
+| **Marcelo Edmundo Bilbao Roca** | `2313010105` | [2313010105@untels.edu.pe](mailto:2313010105@untels.edu.pe) |
+

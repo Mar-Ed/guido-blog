@@ -339,47 +339,55 @@ export default function Home() {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-                  {/* Integrante 1 */}
-                  <div className="p-3 bg-white rounded-lg border border-slate-200 shadow-sm flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs shrink-0">
-                      G1
+                  {/* Integrante 1: Benjamin Chipana */}
+                  <div className="p-3 bg-white rounded-lg border border-slate-200 shadow-sm flex items-center gap-3 hover:border-blue-300 transition-colors">
+                    <div className="w-9 h-9 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs shrink-0">
+                      BC
                     </div>
-                    <div>
-                      <p className="font-bold text-slate-800 text-xs">Integrante 1</p>
-                      <p className="text-[11px] text-slate-500 font-mono">Código / UNTELS</p>
-                    </div>
-                  </div>
-
-                  {/* Integrante 2 */}
-                  <div className="p-3 bg-white rounded-lg border border-slate-200 shadow-sm flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs shrink-0">
-                      G2
-                    </div>
-                    <div>
-                      <p className="font-bold text-slate-800 text-xs">Integrante 2</p>
-                      <p className="text-[11px] text-slate-500 font-mono">Código / UNTELS</p>
+                    <div className="min-w-0 flex-1">
+                      <p className="font-bold text-slate-800 text-xs truncate">Benjamín Adriano Chipana Bandera</p>
+                      <a href="mailto:2223110329@untels.edu.pe" className="text-[11px] text-blue-600 hover:underline font-mono block truncate">
+                        2223110329@untels.edu.pe
+                      </a>
                     </div>
                   </div>
 
-                  {/* Integrante 3 */}
-                  <div className="p-3 bg-white rounded-lg border border-slate-200 shadow-sm flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs shrink-0">
-                      G3
+                  {/* Integrante 2: Xavier Zegarra */}
+                  <div className="p-3 bg-white rounded-lg border border-slate-200 shadow-sm flex items-center gap-3 hover:border-blue-300 transition-colors">
+                    <div className="w-9 h-9 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-xs shrink-0">
+                      XZ
                     </div>
-                    <div>
-                      <p className="font-bold text-slate-800 text-xs">Integrante 3</p>
-                      <p className="text-[11px] text-slate-500 font-mono">Código / UNTELS</p>
+                    <div className="min-w-0 flex-1">
+                      <p className="font-bold text-slate-800 text-xs truncate">Xavier Diego Zegarra Ortega</p>
+                      <a href="mailto:2113110140@untels.edu.pe" className="text-[11px] text-blue-600 hover:underline font-mono block truncate">
+                        2113110140@untels.edu.pe
+                      </a>
                     </div>
                   </div>
 
-                  {/* Integrante 4 */}
-                  <div className="p-3 bg-white rounded-lg border border-slate-200 shadow-sm flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs shrink-0">
-                      G4
+                  {/* Integrante 3: Jose Luis Alfaro */}
+                  <div className="p-3 bg-white rounded-lg border border-slate-200 shadow-sm flex items-center gap-3 hover:border-blue-300 transition-colors">
+                    <div className="w-9 h-9 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs shrink-0">
+                      JA
                     </div>
-                    <div>
-                      <p className="font-bold text-slate-800 text-xs">Integrante 4</p>
-                      <p className="text-[11px] text-slate-500 font-mono">Código / UNTELS</p>
+                    <div className="min-w-0 flex-1">
+                      <p className="font-bold text-slate-800 text-xs truncate">Alfaro Mendoza José Luis</p>
+                      <a href="mailto:2223080086@untels.edu.pe" className="text-[11px] text-blue-600 hover:underline font-mono block truncate">
+                        2223080086@untels.edu.pe
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Integrante 4: Marcelo Bilbao */}
+                  <div className="p-3 bg-white rounded-lg border border-slate-200 shadow-sm flex items-center gap-3 hover:border-blue-300 transition-colors">
+                    <div className="w-9 h-9 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xs shrink-0">
+                      MB
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <p className="font-bold text-slate-800 text-xs truncate">Marcelo Edmundo Bilbao Roca</p>
+                      <a href="mailto:2313010105@untels.edu.pe" className="text-[11px] text-blue-600 hover:underline font-mono block truncate">
+                        2313010105@untels.edu.pe
+                      </a>
                     </div>
                   </div>
                 </div>
