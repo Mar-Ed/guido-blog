@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "INVERSIONES GRANDES IDEAS S.A.C (Inversiones Guido) - Formulación de Proyectos TI | UNTELS",
-  description: "Proceso de Identificación de Stakeholders para el proyecto de TI de INVERSIONES GRANDES IDEAS S.A.C (RUC 20563735865 - Inversiones Guido) - Formulación de Proyectos TI (UNTELS)",
+  title: "Infraestructura Tecnológica de Redes y Servicios Cloud POS - Inversiones Guido | UNTELS",
+  description: "Formulación y Evaluación de Factibilidad para la Implementación de Infraestructura Tecnológica de Redes y Servicios Cloud POS en la MYPE Inversiones Guido (INVERSIONES GRANDES IDEAS S.A.C - RUC 20563735865) - UNTELS",
 };
 
 export default function RootLayout({
