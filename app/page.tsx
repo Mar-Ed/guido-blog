@@ -355,18 +355,6 @@ export default function Home() {
                 </button>
               </div>
 
-              {/* Guion de Defensa para la Exposición */}
-              <div className="bg-slate-900 text-white p-5 rounded-2xl shadow-xl border border-slate-800 relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-1.5 h-full bg-emerald-500"></div>
-                <div className="flex items-center gap-2.5 mb-2.5 text-emerald-400 font-bold text-xs uppercase tracking-widest">
-                  <i className="fas fa-shield-halved"></i>
-                  <span>Defensa del Proyecto &bull; Enfoque de Infraestructura</span>
-                </div>
-                <p className="text-slate-300 text-[13px] leading-relaxed font-light italic">
-                  &ldquo;Profesor, nuestro proyecto no es de desarrollo de software ni programación. Es un proyecto de <strong>Infraestructura de Tecnologías de Información</strong>. Evaluamos la factibilidad de equipar a Inversiones Guido con redes de comunicación, terminales POS físicas, lectoras de barras y servicios cloud para conectar el almacén con la tienda de Villa El Salvador y cumplir con la SUNAT.&rdquo;
-                </p>
-              </div>
-
               {/* Ficha de Integrantes del Grupo */}
               <div className="mt-12 pt-8 border-t border-slate-200/80">
                 <div className="flex flex-wrap items-center justify-between gap-4 mb-5">
