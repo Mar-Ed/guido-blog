@@ -142,17 +142,17 @@ export default function Home() {
         </div>
 
         <div className="hidden lg:flex items-center gap-6 font-medium text-sm text-slate-600">
+          <button onClick={() => scrollTo('empresa-perfil', 'empresa')} className="hover:text-blue-600 transition-colors">
+            1. Empresa & SUNAT
+          </button>
           <button onClick={() => scrollTo('entradas-pmbok', 'entradas')} className="hover:text-blue-600 transition-colors">
-            1. Entradas & Caso Negocio
+            2. Entradas & Caso Negocio
           </button>
           <button onClick={() => scrollTo('herramientas-pmbok', 'herramientas')} className="hover:text-blue-600 transition-colors">
-            2. Herramientas & Matriz
+            3. Herramientas & Matriz
           </button>
           <button onClick={() => scrollTo('salidas-pmbok', 'salidas')} className="hover:text-blue-600 transition-colors">
-            3. Registro Stakeholders
-          </button>
-          <button onClick={() => scrollTo('empresa-perfil', 'empresa')} className="hover:text-blue-600 transition-colors">
-            Empresa Guido
+            4. Registro Stakeholders
           </button>
           <button onClick={() => scrollTo('galeria-fotos', 'empresa')} className="hover:text-blue-600 transition-colors">
             Evidencias de Campo
@@ -195,7 +195,29 @@ export default function Home() {
             </button>
           </div>
 
-          {/* 1. Entradas e Insumos */}
+          {/* 1. Empresa Inversiones Guido */}
+          <div className="px-4 mb-1">
+            <button 
+              onClick={() => toggleMenu('empresa')}
+              className={`w-full flex items-center justify-between px-4 py-2.5 font-semibold text-sm rounded-lg focus:outline-none transition-colors ${menuOpen.empresa ? 'text-slate-900' : 'text-slate-600 hover:bg-slate-50'}`}
+            >
+              <div className="flex items-center gap-3">
+                <i className={`fas fa-building w-5 text-center ${menuOpen.empresa ? 'text-amber-600' : 'text-slate-400'}`}></i>
+                1. Empresa & SUNAT
+              </div>
+              <i className={`fas fa-chevron-${menuOpen.empresa ? 'down' : 'right'} text-xs text-slate-400 transition-transform`}></i>
+            </button>
+            <ul className={`submenu-transition px-4 ml-4 border-l border-slate-200 mt-1 space-y-1 ${menuOpen.empresa ? 'submenu-open mb-3' : ''}`}>
+              <li onClick={() => scrollTo('empresa-perfil', 'empresa')} className="py-1.5 pl-4 text-sm text-slate-600 hover:text-blue-600 cursor-pointer transition-colors rounded-r-md hover:bg-slate-50">
+                Ficha SUNAT & RUC
+              </li>
+              <li onClick={() => scrollTo('galeria-fotos', 'empresa')} className="py-1.5 pl-4 text-sm text-slate-600 hover:text-blue-600 cursor-pointer transition-colors rounded-r-md hover:bg-slate-50">
+                Evidencias de Campo
+              </li>
+            </ul>
+          </div>
+
+          {/* 2. Entradas e Insumos */}
           <div className="px-4 mb-1">
             <button 
               onClick={() => toggleMenu('entradas')}
@@ -203,7 +225,7 @@ export default function Home() {
             >
               <div className="flex items-center gap-3">
                 <i className={`fas fa-file-import w-5 text-center ${menuOpen.entradas ? 'text-blue-600' : 'text-slate-400'}`}></i>
-                1. Entradas e Insumos
+                2. Entradas e Insumos
               </div>
               <i className={`fas fa-chevron-${menuOpen.entradas ? 'down' : 'right'} text-xs text-slate-400 transition-transform`}></i>
             </button>
@@ -220,7 +242,7 @@ export default function Home() {
             </ul>
           </div>
 
-          {/* 2. Herramientas y Técnicas */}
+          {/* 3. Herramientas y Técnicas */}
           <div className="px-4 mb-1">
             <button 
               onClick={() => toggleMenu('herramientas')}
@@ -228,7 +250,7 @@ export default function Home() {
             >
               <div className="flex items-center gap-3">
                 <i className={`fas fa-toolbox w-5 text-center ${menuOpen.herramientas ? 'text-indigo-600' : 'text-slate-400'}`}></i>
-                2. Herramientas Usadas
+                3. Herramientas Usadas
               </div>
               <i className={`fas fa-chevron-${menuOpen.herramientas ? 'down' : 'right'} text-xs text-slate-400 transition-transform`}></i>
             </button>
@@ -245,7 +267,7 @@ export default function Home() {
             </ul>
           </div>
 
-          {/* 3. Salidas Generadas */}
+          {/* 4. Salidas Generadas */}
           <div className="px-4 mb-1">
             <button 
               onClick={() => toggleMenu('salidas')}
@@ -253,7 +275,7 @@ export default function Home() {
             >
               <div className="flex items-center gap-3">
                 <i className={`fas fa-file-export w-5 text-center ${menuOpen.salidas ? 'text-emerald-600' : 'text-slate-400'}`}></i>
-                3. Salidas Generadas
+                4. Salidas Generadas
               </div>
               <i className={`fas fa-chevron-${menuOpen.salidas ? 'down' : 'right'} text-xs text-slate-400 transition-transform`}></i>
             </button>
@@ -263,28 +285,6 @@ export default function Home() {
               </li>
               <li onClick={() => scrollTo('matriz-involucramiento', 'salidas')} className="py-1.5 pl-4 text-sm text-slate-600 hover:text-blue-600 cursor-pointer transition-colors rounded-r-md hover:bg-slate-50">
                 Matriz de Involucramiento
-              </li>
-            </ul>
-          </div>
-
-          {/* 4. Empresa Inversiones Guido */}
-          <div className="px-4 mb-1">
-            <button 
-              onClick={() => toggleMenu('empresa')}
-              className={`w-full flex items-center justify-between px-4 py-2.5 font-semibold text-sm rounded-lg focus:outline-none transition-colors ${menuOpen.empresa ? 'text-slate-900' : 'text-slate-600 hover:bg-slate-50'}`}
-            >
-              <div className="flex items-center gap-3">
-                <i className={`fas fa-building w-5 text-center ${menuOpen.empresa ? 'text-amber-600' : 'text-slate-400'}`}></i>
-                Empresa Guido (Contexto)
-              </div>
-              <i className={`fas fa-chevron-${menuOpen.empresa ? 'down' : 'right'} text-xs text-slate-400 transition-transform`}></i>
-            </button>
-            <ul className={`submenu-transition px-4 ml-4 border-l border-slate-200 mt-1 space-y-1 ${menuOpen.empresa ? 'submenu-open mb-3' : ''}`}>
-              <li onClick={() => scrollTo('empresa-perfil', 'empresa')} className="py-1.5 pl-4 text-sm text-slate-600 hover:text-blue-600 cursor-pointer transition-colors rounded-r-md hover:bg-slate-50">
-                Perfil de Inversiones Guido
-              </li>
-              <li onClick={() => scrollTo('galeria-fotos', 'empresa')} className="py-1.5 pl-4 text-sm text-slate-600 hover:text-blue-600 cursor-pointer transition-colors rounded-r-md hover:bg-slate-50">
-                Evidencias de Campo
               </li>
             </ul>
           </div>
@@ -418,400 +418,7 @@ export default function Home() {
           <hr className="border-slate-200" />
 
           {/* ========================================================
-              SECCIÓN 1: ENTRADAS E INSUMOS DEL PROCESO DE IDENTIFICACIÓN
-             ======================================================== */}
-          <div id="entradas-pmbok" className="space-y-8">
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-              <div>
-                <div className="inline-block px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-bold tracking-wide uppercase mb-2 border border-blue-200">
-                  Fase de Inicio &bull; PMBOK
-                </div>
-                <h2 className="font-bold text-3xl text-slate-900 tracking-tight">1. Entradas e Insumos Utilizados</h2>
-                <p className="text-slate-500 mt-2 text-lg">Documentos base, factores ambientales y políticas que originan la lista de involucrados</p>
-              </div>
-              <span className="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1.5 rounded-lg border border-slate-200 flex items-center gap-1.5 w-max">
-                <i className="fas fa-layer-group text-blue-600"></i> 4 Insumos Clave
-              </span>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              
-              {/* Insumo 1: Caso de Negocio */}
-              <div id="caso-negocio" className="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col hover:border-blue-300 transition-all">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center text-lg">
-                    <i className="fas fa-file-invoice-dollar"></i>
-                  </div>
-                  <span className="text-[10px] font-mono bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-bold uppercase">Entrada Fundamental</span>
-                </div>
-                <h3 className="font-bold text-lg text-slate-900 mb-2">Caso de Negocio (Business Case)</h3>
-                <p className="text-sm text-slate-600 leading-relaxed flex-1">
-                  Justificación económica y estratégica del proyecto. En <strong>Inversiones Guido</strong>, sustenta la inversión en software y hardware para frenar pérdidas por quiebres de inventario, eliminar costos de papelería física y reducir el tiempo de respuesta al cliente.
-                </p>
-                <div className="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-                  <span><strong>Interesados derivados:</strong> Patrocinador, Gerente Financiero</span>
-                  <i className="fas fa-check-circle text-emerald-600"></i>
-                </div>
-              </div>
-
-              {/* Insumo 2: Factores Ambientales de la Empresa (EEF) */}
-              <div id="factores-ambientales" className="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col hover:border-blue-300 transition-all">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center text-lg">
-                    <i className="fas fa-earth-americas"></i>
-                  </div>
-                  <span className="text-[10px] font-mono bg-purple-100 text-purple-800 px-2 py-0.5 rounded font-bold uppercase">EEF & Entorno</span>
-                </div>
-                <h3 className="font-bold text-lg text-slate-900 mb-2">Factores Ambientales de la Empresa (EEF)</h3>
-                <p className="text-sm text-slate-600 leading-relaxed flex-1">
-                  Factores internos y externos no controlables: el marco regulatorio fiscal de <strong>SUNAT (RUC 20563735865, Contribuyente Activo y Habido)</strong>, la cultura comercial en el Parque Industrial de <strong>Villa El Salvador</strong>, la infraestructura tecnológica actual (PCs básicas) y los canales de comunicación tradicionales del personal.
-                </p>
-                <div className="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-                  <span><strong>Interesados derivados:</strong> Vendedores en tienda, Personal de Almacén</span>
-                  <i className="fas fa-check-circle text-emerald-600"></i>
-                </div>
-              </div>
-
-              {/* Insumo 3: Activos de los Procesos de la Organización (OPA) */}
-              <div id="activos-procesos" className="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col hover:border-blue-300 transition-all">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center text-lg">
-                    <i className="fas fa-folder-tree"></i>
-                  </div>
-                  <span className="text-[10px] font-mono bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-bold uppercase">OPA & Políticas</span>
-                </div>
-                <h3 className="font-bold text-lg text-slate-900 mb-2">Activos de los Procesos de la Organización (OPA)</h3>
-                <p className="text-sm text-slate-600 leading-relaxed flex-1">
-                  Formatos físicos y normativas existentes: registros manuales de kardex en papel, talonarios de comprobantes, políticas de garantías de muebles y manuales informales de atención al cliente.
-                </p>
-                <div className="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-                  <span><strong>Interesados derivados:</strong> Jefe de Logística, Administrador</span>
-                  <i className="fas fa-check-circle text-emerald-600"></i>
-                </div>
-              </div>
-
-              {/* Insumo 4: Acuerdos y Contratos */}
-              <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col hover:border-blue-300 transition-all">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg">
-                    <i className="fas fa-handshake"></i>
-                  </div>
-                  <span className="text-[10px] font-mono bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-bold uppercase">Acuerdos Externos</span>
-                </div>
-                <h3 className="font-bold text-lg text-slate-900 mb-2">Acuerdos y Contratos de Suministro</h3>
-                <p className="text-sm text-slate-600 leading-relaxed flex-1">
-                  Convenios comerciales con los proveedores de madera, pintura, tapicería y cerrajería en Lima Sur, así como compromisos pactados de entrega y despacho con clientes finales.
-                </p>
-                <div className="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-                  <span><strong>Interesados derivados:</strong> Proveedores clave, Transportistas</span>
-                  <i className="fas fa-check-circle text-emerald-600"></i>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <hr className="border-slate-200" />
-
-          {/* ========================================================
-              SECCIÓN 2: HERRAMIENTAS Y TÉCNICAS UTILIZADAS
-             ======================================================== */}
-          <div id="herramientas-pmbok" className="space-y-8">
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-              <div>
-                <div className="inline-block px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-xs font-bold tracking-wide uppercase mb-2 border border-indigo-200">
-                  Análisis & Métodos
-                </div>
-                <h2 className="font-bold text-3xl text-slate-900 tracking-tight">2. Herramientas y Técnicas Empleadas</h2>
-                <p className="text-slate-500 mt-2 text-lg">Metodologías para clasificar, ponderar y priorizar a cada interesado en Inversiones Guido</p>
-              </div>
-              <span className="text-xs font-semibold bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg border border-indigo-100 flex items-center gap-1.5 w-max">
-                <i className="fas fa-chart-pie"></i> Matriz Poder / Interés
-              </span>
-            </div>
-
-            {/* Matriz Poder / Interés Visual */}
-            <div id="matriz-poder-interes" className="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8">
-              <div className="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-2">
-                <div>
-                  <h3 className="font-bold text-xl text-slate-900">Matriz de Clasificación Poder vs. Interés</h3>
-                  <p className="text-slate-500 text-sm">Cuadrante estratégico para determinar el nivel de comunicación y gestión requerido</p>
-                </div>
-                <div className="text-xs text-slate-500 bg-slate-50 px-3 py-1.5 rounded-md border border-slate-200">
-                  Eje X: <strong>Interés</strong> | Eje Y: <strong>Poder</strong>
-                </div>
-              </div>
-
-              {/* Cuadrante 2x2 */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                
-                {/* Cuadrante Alto Poder / Alto Interés */}
-                <div className="p-5 rounded-xl bg-blue-50 border-2 border-blue-300 flex flex-col justify-between">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs font-bold bg-blue-600 text-white px-2.5 py-0.5 rounded uppercase">Gestionar de Cerca</span>
-                    <span className="text-xs font-semibold text-blue-700">Poder: Alto | Interés: Alto</span>
-                  </div>
-                  <p className="text-xs text-slate-600 mb-4">Involucrar activamente y satisfacer plenamente sus expectativas clave.</p>
-                  <div className="space-y-2 bg-white p-3 rounded-lg border border-blue-200">
-                    <div className="flex items-center justify-between text-xs font-bold text-slate-800">
-                      <span>• Guido (Patrocinador / Gerencia General)</span>
-                      <span className="text-blue-600 font-mono">STK-01</span>
-                    </div>
-                    <div className="flex items-center justify-between text-xs font-bold text-slate-800">
-                      <span>• Jefatura de Almacén & Logística</span>
-                      <span className="text-blue-600 font-mono">STK-02</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Cuadrante Alto Poder / Bajo Interés */}
-                <div className="p-5 rounded-xl bg-amber-50 border-2 border-amber-300 flex flex-col justify-between">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs font-bold bg-amber-600 text-white px-2.5 py-0.5 rounded uppercase">Mantener Satisfecho</span>
-                    <span className="text-xs font-semibold text-amber-700">Poder: Alto/Medio | Interés: Bajo</span>
-                  </div>
-                  <p className="text-xs text-slate-600 mb-4">Mantener informados con reportes periódicos para evitar resistencias.</p>
-                  <div className="space-y-2 bg-white p-3 rounded-lg border border-amber-200">
-                    <div className="flex items-center justify-between text-xs font-bold text-slate-800">
-                      <span>• Proveedores Principales de Madera</span>
-                      <span className="text-amber-600 font-mono">STK-05</span>
-                    </div>
-                    <div className="flex items-center justify-between text-xs font-bold text-slate-800">
-                      <span>• Entidades Tributarias y Legales (SUNAT)</span>
-                      <span className="text-amber-600 font-mono">EXT</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Cuadrante Bajo Poder / Alto Interés */}
-                <div className="p-5 rounded-xl bg-emerald-50 border-2 border-emerald-300 flex flex-col justify-between">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs font-bold bg-emerald-600 text-white px-2.5 py-0.5 rounded uppercase">Mantener Informado</span>
-                    <span className="text-xs font-semibold text-emerald-700">Poder: Bajo | Interés: Alto</span>
-                  </div>
-                  <p className="text-xs text-slate-600 mb-4">Comunicación bidireccional continua sobre cambios operativos.</p>
-                  <div className="space-y-2 bg-white p-3 rounded-lg border border-emerald-200">
-                    <div className="flex items-center justify-between text-xs font-bold text-slate-800">
-                      <span>• Asesores de Ventas de Tienda</span>
-                      <span className="text-emerald-600 font-mono">STK-03</span>
-                    </div>
-                    <div className="flex items-center justify-between text-xs font-bold text-slate-800">
-                      <span>• Clientes Finales de Muebles</span>
-                      <span className="text-emerald-600 font-mono">STK-04</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Cuadrante Bajo Poder / Bajo Interés */}
-                <div className="p-5 rounded-xl bg-slate-100 border-2 border-slate-300 flex flex-col justify-between">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs font-bold bg-slate-600 text-white px-2.5 py-0.5 rounded uppercase">Monitorear</span>
-                    <span className="text-xs font-semibold text-slate-700">Poder: Bajo | Interés: Bajo</span>
-                  </div>
-                  <p className="text-xs text-slate-600 mb-4">Supervisar con mínimo esfuerzo sin saturar de mensajes.</p>
-                  <div className="space-y-2 bg-white p-3 rounded-lg border border-slate-200">
-                    <div className="flex items-center justify-between text-xs font-bold text-slate-800">
-                      <span>• Servicios de Mensajería Esporádica</span>
-                      <span className="text-slate-600 font-mono">EXT</span>
-                    </div>
-                    <div className="flex items-center justify-between text-xs font-bold text-slate-800">
-                      <span>• Público General de Villa El Salvador</span>
-                      <span className="text-slate-600 font-mono">EXT</span>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            {/* Técnicas de Recopilación */}
-            <div id="tecnicas-recopilacion" className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="p-5 rounded-xl bg-white border border-slate-200 shadow-sm">
-                <div className="w-10 h-10 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center text-lg mb-3">
-                  <i className="fas fa-brain"></i>
-                </div>
-                <h4 className="font-bold text-slate-900 mb-1">Tormenta de Ideas</h4>
-                <p className="text-xs text-slate-600">Sesiones participativas entre el equipo formulador de TI y jefes de área de Inversiones Guido para descubrir partes afectadas no evidentes.</p>
-              </div>
-
-              <div className="p-5 rounded-xl bg-white border border-slate-200 shadow-sm">
-                <div className="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center text-lg mb-3">
-                  <i className="fas fa-comments"></i>
-                </div>
-                <h4 className="font-bold text-slate-900 mb-1">Entrevistas Individuales</h4>
-                <p className="text-xs text-slate-600">Cuestionarios directos en la tienda y almacén para identificar temores al cambio tecnológico y expectativas de rapidez en ventas.</p>
-              </div>
-
-              <div id="modelo-prominencia" className="p-5 rounded-xl bg-white border border-slate-200 shadow-sm">
-                <div className="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg mb-3">
-                  <i className="fas fa-diagram-project"></i>
-                </div>
-                <h4 className="font-bold text-slate-900 mb-1">Modelo de Prominencia</h4>
-                <p className="text-xs text-slate-600">Evaluación tridimensional basada en <strong>Poder</strong> (autoridad), <strong>Legitimidad</strong> (relación contractual) y <strong>Urgencia</strong> (necesidad de atención inmediata).</p>
-              </div>
-            </div>
-          </div>
-
-          <hr className="border-slate-200" />
-
-          {/* ========================================================
-              SECCIÓN 3: SALIDAS GENERADAS - REGISTRO DE STAKEHOLDERS
-             ======================================================== */}
-          <div id="salidas-pmbok" className="space-y-8">
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-              <div>
-                <div className="inline-block px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full text-xs font-bold tracking-wide uppercase mb-2 border border-emerald-200">
-                  Artefacto Oficial &bull; Salida del Proceso
-                </div>
-                <h2 className="font-bold text-3xl text-slate-900 tracking-tight">3. Registro de Stakeholders Formal</h2>
-                <p className="text-slate-500 mt-2 text-lg">Catálogo consolidado de interesados con roles, expectativas y niveles de involucramiento</p>
-              </div>
-
-              {/* Filtro Interactivo */}
-              <div className="flex items-center gap-2 bg-slate-100 p-1 rounded-lg border border-slate-200 text-xs font-semibold w-max">
-                <button 
-                  onClick={() => setSelectedFilter('all')}
-                  className={`px-3 py-1.5 rounded-md transition-colors ${selectedFilter === 'all' ? 'bg-white text-blue-600 shadow-sm' : 'text-slate-600 hover:text-slate-900'}`}
-                >
-                  Todos ({stakeholdersData.length})
-                </button>
-                <button 
-                  onClick={() => setSelectedFilter('interno')}
-                  className={`px-3 py-1.5 rounded-md transition-colors ${selectedFilter === 'interno' ? 'bg-white text-blue-600 shadow-sm' : 'text-slate-600 hover:text-slate-900'}`}
-                >
-                  Internos
-                </button>
-                <button 
-                  onClick={() => setSelectedFilter('externo')}
-                  className={`px-3 py-1.5 rounded-md transition-colors ${selectedFilter === 'externo' ? 'bg-white text-blue-600 shadow-sm' : 'text-slate-600 hover:text-slate-900'}`}
-                >
-                  Externos
-                </button>
-              </div>
-            </div>
-
-            {/* Tabla Detallada de Stakeholders */}
-            <div id="registro-stakeholders" className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
-              <div className="overflow-x-auto">
-                <table className="w-full text-left text-sm text-slate-700">
-                  <thead className="bg-slate-100 text-slate-900 font-bold text-xs uppercase tracking-wider border-b border-slate-200">
-                    <tr>
-                      <th className="py-3 px-4">ID / Interesado</th>
-                      <th className="py-3 px-4">Rol & Tipo</th>
-                      <th className="py-3 px-4">Poder / Interés</th>
-                      <th className="py-3 px-4">Involucramiento (Act &rarr; Des)</th>
-                      <th className="py-3 px-4">Expectativas Principales</th>
-                      <th className="py-3 px-4">Estrategia PMBOK</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-100">
-                    {filteredStakeholders.map((s) => (
-                      <tr key={s.id} className="hover:bg-slate-50/70 transition-colors">
-                        <td className="py-4 px-4">
-                          <span className="font-mono text-xs font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded border border-blue-100 block w-max mb-1">
-                            {s.id}
-                          </span>
-                          <strong className="text-slate-900 block">{s.nombre}</strong>
-                        </td>
-                        <td className="py-4 px-4">
-                          <span className="text-slate-800 font-medium block text-xs">{s.rol}</span>
-                          <span className={`text-[10px] uppercase font-bold px-2 py-0.5 rounded inline-block mt-1 ${s.tipo === 'interno' ? 'bg-blue-50 text-blue-700' : 'bg-amber-50 text-amber-700'}`}>
-                            {s.tipo}
-                          </span>
-                        </td>
-                        <td className="py-4 px-4">
-                          <div className="text-xs space-y-1">
-                            <div>Poder: <span className="font-bold text-slate-900">{s.poder}</span></div>
-                            <div>Interés: <span className="font-bold text-slate-900">{s.interes}</span></div>
-                          </div>
-                        </td>
-                        <td className="py-4 px-4">
-                          <div className="text-xs">
-                            <span className="text-slate-500">{s.apoyoActual}</span>
-                            <span className="mx-1.5 text-blue-500 font-bold">&rarr;</span>
-                            <span className="font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-100">
-                              {s.apoyoDeseado}
-                            </span>
-                          </div>
-                        </td>
-                        <td className="py-4 px-4 text-xs text-slate-600 max-w-xs">
-                          {s.expectativas}
-                        </td>
-                        <td className="py-4 px-4 text-xs">
-                          <span className="font-semibold text-slate-900 block">{s.estrategia.split('(')[0]}</span>
-                          <span className="text-slate-500 text-[11px] block mt-0.5">{s.estrategia.includes('(') ? s.estrategia.substring(s.estrategia.indexOf('(')) : ''}</span>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            {/* Matriz de Evaluación del Involucramiento */}
-            <div id="matriz-involucramiento" className="bg-slate-100 rounded-xl p-6 md:p-8 border border-slate-200">
-              <h4 className="font-bold text-lg text-slate-900 mb-2 flex items-center gap-2">
-                <i className="fas fa-sliders text-emerald-600"></i> Matriz de Evaluación del Involucramiento (Actual vs. Deseado)
-              </h4>
-              <p className="text-xs text-slate-600 mb-6">
-                Representación de brechas donde <strong>C</strong> indica nivel actual (Current) y <strong>D</strong> indica nivel deseado (Desired) según estándar PMBOK.
-              </p>
-
-              <div className="overflow-x-auto bg-white rounded-lg border border-slate-200 p-4">
-                <table className="w-full text-center text-xs text-slate-700">
-                  <thead>
-                    <tr className="border-b border-slate-200 text-slate-900 font-bold uppercase">
-                      <th className="py-2.5 px-3 text-left">Interesado</th>
-                      <th className="py-2.5 px-2">Desconocedor</th>
-                      <th className="py-2.5 px-2">Resistente</th>
-                      <th className="py-2.5 px-2">Neutral</th>
-                      <th className="py-2.5 px-2">Alentador</th>
-                      <th className="py-2.5 px-2">Comprometido</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-100 font-medium">
-                    <tr>
-                      <td className="py-2.5 px-3 text-left font-bold text-slate-800">Guido (Gerencia General)</td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td className="bg-emerald-50 text-emerald-700 font-bold font-mono">C, D</td>
-                    </tr>
-                    <tr>
-                      <td className="py-2.5 px-3 text-left font-bold text-slate-800">Jefatura de Almacén</td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td className="text-blue-600 font-mono font-bold">C</td>
-                      <td className="bg-emerald-50 text-emerald-700 font-mono font-bold">D</td>
-                    </tr>
-                    <tr>
-                      <td className="py-2.5 px-3 text-left font-bold text-slate-800">Asesores de Ventas</td>
-                      <td></td>
-                      <td></td>
-                      <td className="text-amber-600 font-mono font-bold">C</td>
-                      <td className="bg-emerald-50 text-emerald-700 font-mono font-bold">D</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td className="py-2.5 px-3 text-left font-bold text-slate-800">Proveedores de Madera</td>
-                      <td></td>
-                      <td></td>
-                      <td className="text-slate-600 font-mono font-bold">C</td>
-                      <td className="bg-emerald-50 text-emerald-700 font-mono font-bold">D</td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-
-          <hr className="border-slate-200" />
-
-          {/* ========================================================
-              SECCIÓN 4: CONTEXTO EMPRESARIAL - INVERSIONES GUIDO
+              SECCIÓN 1: CONTEXTO EMPRESARIAL & IDENTIFICACIÓN FISCAL (SUNAT)
              ======================================================== */}
           <div id="empresa-perfil" className="space-y-8">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
@@ -819,7 +426,7 @@ export default function Home() {
                 <div className="inline-block px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-xs font-bold tracking-wide uppercase mb-2 border border-amber-200">
                   Organización Beneficiaria &bull; Ficha SUNAT
                 </div>
-                <h2 className="font-bold text-3xl text-slate-900 tracking-tight">4. Contexto Empresarial & Identificación Fiscal</h2>
+                <h2 className="font-bold text-3xl text-slate-900 tracking-tight">1. Contexto Empresarial & Identificación Fiscal</h2>
                 <p className="text-slate-500 mt-2 text-lg">Información legal y tributaria registrada ante la SUNAT y entorno del negocio</p>
               </div>
               <div className="flex items-center gap-2">
@@ -1020,6 +627,399 @@ export default function Home() {
                   </div>
                 </div>
 
+              </div>
+            </div>
+          </div>
+
+          <hr className="border-slate-200" />
+
+          {/* ========================================================
+              SECCIÓN 2: ENTRADAS E INSUMOS DEL PROCESO DE IDENTIFICACIÓN
+             ======================================================== */}
+          <div id="entradas-pmbok" className="space-y-8">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+              <div>
+                <div className="inline-block px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-bold tracking-wide uppercase mb-2 border border-blue-200">
+                  Fase de Inicio &bull; PMBOK
+                </div>
+                <h2 className="font-bold text-3xl text-slate-900 tracking-tight">2. Entradas e Insumos Utilizados</h2>
+                <p className="text-slate-500 mt-2 text-lg">Documentos base, factores ambientales y políticas que originan la lista de involucrados</p>
+              </div>
+              <span className="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1.5 rounded-lg border border-slate-200 flex items-center gap-1.5 w-max">
+                <i className="fas fa-layer-group text-blue-600"></i> 4 Insumos Clave
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              
+              {/* Insumo 1: Caso de Negocio */}
+              <div id="caso-negocio" className="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col hover:border-blue-300 transition-all">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center text-lg">
+                    <i className="fas fa-file-invoice-dollar"></i>
+                  </div>
+                  <span className="text-[10px] font-mono bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-bold uppercase">Entrada Fundamental</span>
+                </div>
+                <h3 className="font-bold text-lg text-slate-900 mb-2">Caso de Negocio (Business Case)</h3>
+                <p className="text-sm text-slate-600 leading-relaxed flex-1">
+                  Justificación económica y estratégica del proyecto. En <strong>Inversiones Guido</strong>, sustenta la inversión en software y hardware para frenar pérdidas por quiebres de inventario, eliminar costos de papelería física y reducir el tiempo de respuesta al cliente.
+                </p>
+                <div className="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                  <span><strong>Interesados derivados:</strong> Patrocinador, Gerente Financiero</span>
+                  <i className="fas fa-check-circle text-emerald-600"></i>
+                </div>
+              </div>
+
+              {/* Insumo 2: Factores Ambientales de la Empresa (EEF) */}
+              <div id="factores-ambientales" className="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col hover:border-blue-300 transition-all">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center text-lg">
+                    <i className="fas fa-earth-americas"></i>
+                  </div>
+                  <span className="text-[10px] font-mono bg-purple-100 text-purple-800 px-2 py-0.5 rounded font-bold uppercase">EEF & Entorno</span>
+                </div>
+                <h3 className="font-bold text-lg text-slate-900 mb-2">Factores Ambientales de la Empresa (EEF)</h3>
+                <p className="text-sm text-slate-600 leading-relaxed flex-1">
+                  Factores internos y externos no controlables: el marco regulatorio fiscal de <strong>SUNAT (RUC 20563735865, Contribuyente Activo y Habido)</strong>, la cultura comercial en el Parque Industrial de <strong>Villa El Salvador</strong>, la infraestructura tecnológica actual (PCs básicas) y los canales de comunicación tradicionales del personal.
+                </p>
+                <div className="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                  <span><strong>Interesados derivados:</strong> Vendedores en tienda, Personal de Almacén</span>
+                  <i className="fas fa-check-circle text-emerald-600"></i>
+                </div>
+              </div>
+
+              {/* Insumo 3: Activos de los Procesos de la Organización (OPA) */}
+              <div id="activos-procesos" className="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col hover:border-blue-300 transition-all">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center text-lg">
+                    <i className="fas fa-folder-tree"></i>
+                  </div>
+                  <span className="text-[10px] font-mono bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-bold uppercase">OPA & Políticas</span>
+                </div>
+                <h3 className="font-bold text-lg text-slate-900 mb-2">Activos de los Procesos de la Organización (OPA)</h3>
+                <p className="text-sm text-slate-600 leading-relaxed flex-1">
+                  Formatos físicos y normativas existentes: registros manuales de kardex en papel, talonarios de comprobantes, políticas de garantías de muebles y manuales informales de atención al cliente.
+                </p>
+                <div className="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                  <span><strong>Interesados derivados:</strong> Jefe de Logística, Administrador</span>
+                  <i className="fas fa-check-circle text-emerald-600"></i>
+                </div>
+              </div>
+
+              {/* Insumo 4: Acuerdos y Contratos */}
+              <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col hover:border-blue-300 transition-all">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg">
+                    <i className="fas fa-handshake"></i>
+                  </div>
+                  <span className="text-[10px] font-mono bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-bold uppercase">Acuerdos Externos</span>
+                </div>
+                <h3 className="font-bold text-lg text-slate-900 mb-2">Acuerdos y Contratos de Suministro</h3>
+                <p className="text-sm text-slate-600 leading-relaxed flex-1">
+                  Convenios comerciales con los proveedores de madera, pintura, tapicería y cerrajería en Lima Sur, así como compromisos pactados de entrega y despacho con clientes finales.
+                </p>
+                <div className="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                  <span><strong>Interesados derivados:</strong> Proveedores clave, Transportistas</span>
+                  <i className="fas fa-check-circle text-emerald-600"></i>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <hr className="border-slate-200" />
+
+          {/* ========================================================
+              SECCIÓN 3: HERRAMIENTAS Y TÉCNICAS UTILIZADAS
+             ======================================================== */}
+          <div id="herramientas-pmbok" className="space-y-8">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+              <div>
+                <div className="inline-block px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-xs font-bold tracking-wide uppercase mb-2 border border-indigo-200">
+                  Análisis & Métodos
+                </div>
+                <h2 className="font-bold text-3xl text-slate-900 tracking-tight">3. Herramientas y Técnicas Empleadas</h2>
+                <p className="text-slate-500 mt-2 text-lg">Metodologías para clasificar, ponderar y priorizar a cada interesado en Inversiones Guido</p>
+              </div>
+              <span className="text-xs font-semibold bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg border border-indigo-100 flex items-center gap-1.5 w-max">
+                <i className="fas fa-chart-pie"></i> Matriz Poder / Interés
+              </span>
+            </div>
+
+            {/* Matriz Poder / Interés Visual */}
+            <div id="matriz-poder-interes" className="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8">
+              <div className="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-2">
+                <div>
+                  <h3 className="font-bold text-xl text-slate-900">Matriz de Clasificación Poder vs. Interés</h3>
+                  <p className="text-slate-500 text-sm">Cuadrante estratégico para determinar el nivel de comunicación y gestión requerido</p>
+                </div>
+                <div className="text-xs text-slate-500 bg-slate-50 px-3 py-1.5 rounded-md border border-slate-200">
+                  Eje X: <strong>Interés</strong> | Eje Y: <strong>Poder</strong>
+                </div>
+              </div>
+
+              {/* Cuadrante 2x2 */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                
+                {/* Cuadrante Alto Poder / Alto Interés */}
+                <div className="p-5 rounded-xl bg-blue-50 border-2 border-blue-300 flex flex-col justify-between">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-xs font-bold bg-blue-600 text-white px-2.5 py-0.5 rounded uppercase">Gestionar de Cerca</span>
+                    <span className="text-xs font-semibold text-blue-700">Poder: Alto | Interés: Alto</span>
+                  </div>
+                  <p className="text-xs text-slate-600 mb-4">Involucrar activamente y satisfacer plenamente sus expectativas clave.</p>
+                  <div className="space-y-2 bg-white p-3 rounded-lg border border-blue-200">
+                    <div className="flex items-center justify-between text-xs font-bold text-slate-800">
+                      <span>• Guido (Patrocinador / Gerencia General)</span>
+                      <span className="text-blue-600 font-mono">STK-01</span>
+                    </div>
+                    <div className="flex items-center justify-between text-xs font-bold text-slate-800">
+                      <span>• Jefatura de Almacén & Logística</span>
+                      <span className="text-blue-600 font-mono">STK-02</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Cuadrante Alto Poder / Bajo Interés */}
+                <div className="p-5 rounded-xl bg-amber-50 border-2 border-amber-300 flex flex-col justify-between">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-xs font-bold bg-amber-600 text-white px-2.5 py-0.5 rounded uppercase">Mantener Satisfecho</span>
+                    <span className="text-xs font-semibold text-amber-700">Poder: Alto/Medio | Interés: Bajo</span>
+                  </div>
+                  <p className="text-xs text-slate-600 mb-4">Mantener informados con reportes periódicos para evitar resistencias.</p>
+                  <div className="space-y-2 bg-white p-3 rounded-lg border border-amber-200">
+                    <div className="flex items-center justify-between text-xs font-bold text-slate-800">
+                      <span>• Proveedores Principales de Madera</span>
+                      <span className="text-amber-600 font-mono">STK-05</span>
+                    </div>
+                    <div className="flex items-center justify-between text-xs font-bold text-slate-800">
+                      <span>• Entidades Tributarias y Legales (SUNAT)</span>
+                      <span className="text-amber-600 font-mono">EXT</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Cuadrante Bajo Poder / Alto Interés */}
+                <div className="p-5 rounded-xl bg-emerald-50 border-2 border-emerald-300 flex flex-col justify-between">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-xs font-bold bg-emerald-600 text-white px-2.5 py-0.5 rounded uppercase">Mantener Informado</span>
+                    <span className="text-xs font-semibold text-emerald-700">Poder: Bajo | Interés: Alto</span>
+                  </div>
+                  <p className="text-xs text-slate-600 mb-4">Comunicación bidireccional continua sobre cambios operativos.</p>
+                  <div className="space-y-2 bg-white p-3 rounded-lg border border-emerald-200">
+                    <div className="flex items-center justify-between text-xs font-bold text-slate-800">
+                      <span>• Asesores de Ventas de Tienda</span>
+                      <span className="text-emerald-600 font-mono">STK-03</span>
+                    </div>
+                    <div className="flex items-center justify-between text-xs font-bold text-slate-800">
+                      <span>• Clientes Finales de Muebles</span>
+                      <span className="text-emerald-600 font-mono">STK-04</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Cuadrante Bajo Poder / Bajo Interés */}
+                <div className="p-5 rounded-xl bg-slate-100 border-2 border-slate-300 flex flex-col justify-between">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-xs font-bold bg-slate-600 text-white px-2.5 py-0.5 rounded uppercase">Monitorear</span>
+                    <span className="text-xs font-semibold text-slate-700">Poder: Bajo | Interés: Bajo</span>
+                  </div>
+                  <p className="text-xs text-slate-600 mb-4">Supervisar con mínimo esfuerzo sin saturar de mensajes.</p>
+                  <div className="space-y-2 bg-white p-3 rounded-lg border border-slate-200">
+                    <div className="flex items-center justify-between text-xs font-bold text-slate-800">
+                      <span>• Servicios de Mensajería Esporádica</span>
+                      <span className="text-slate-600 font-mono">EXT</span>
+                    </div>
+                    <div className="flex items-center justify-between text-xs font-bold text-slate-800">
+                      <span>• Público General de Villa El Salvador</span>
+                      <span className="text-slate-600 font-mono">EXT</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            {/* Técnicas de Recopilación */}
+            <div id="tecnicas-recopilacion" className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="p-5 rounded-xl bg-white border border-slate-200 shadow-sm">
+                <div className="w-10 h-10 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center text-lg mb-3">
+                  <i className="fas fa-brain"></i>
+                </div>
+                <h4 className="font-bold text-slate-900 mb-1">Tormenta de Ideas</h4>
+                <p className="text-xs text-slate-600">Sesiones participativas entre el equipo formulador de TI y jefes de área de Inversiones Guido para descubrir partes afectadas no evidentes.</p>
+              </div>
+
+              <div className="p-5 rounded-xl bg-white border border-slate-200 shadow-sm">
+                <div className="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center text-lg mb-3">
+                  <i className="fas fa-comments"></i>
+                </div>
+                <h4 className="font-bold text-slate-900 mb-1">Entrevistas Individuales</h4>
+                <p className="text-xs text-slate-600">Cuestionarios directos en la tienda y almacén para identificar temores al cambio tecnológico y expectativas de rapidez en ventas.</p>
+              </div>
+
+              <div id="modelo-prominencia" className="p-5 rounded-xl bg-white border border-slate-200 shadow-sm">
+                <div className="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg mb-3">
+                  <i className="fas fa-diagram-project"></i>
+                </div>
+                <h4 className="font-bold text-slate-900 mb-1">Modelo de Prominencia</h4>
+                <p className="text-xs text-slate-600">Evaluación tridimensional basada en <strong>Poder</strong> (autoridad), <strong>Legitimidad</strong> (relación contractual) y <strong>Urgencia</strong> (necesidad de atención inmediata).</p>
+              </div>
+            </div>
+          </div>
+
+          <hr className="border-slate-200" />
+
+          {/* ========================================================
+              SECCIÓN 4: SALIDAS GENERADAS - REGISTRO DE STAKEHOLDERS
+             ======================================================== */}
+          <div id="salidas-pmbok" className="space-y-8">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+              <div>
+                <div className="inline-block px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full text-xs font-bold tracking-wide uppercase mb-2 border border-emerald-200">
+                  Artefacto Oficial &bull; Salida del Proceso
+                </div>
+                <h2 className="font-bold text-3xl text-slate-900 tracking-tight">4. Registro de Stakeholders Formal</h2>
+                <p className="text-slate-500 mt-2 text-lg">Catálogo consolidado de interesados con roles, expectativas y niveles de involucramiento</p>
+              </div>
+
+              {/* Filtro Interactivo */}
+              <div className="flex items-center gap-2 bg-slate-100 p-1 rounded-lg border border-slate-200 text-xs font-semibold w-max">
+                <button 
+                  onClick={() => setSelectedFilter('all')}
+                  className={`px-3 py-1.5 rounded-md transition-colors ${selectedFilter === 'all' ? 'bg-white text-blue-600 shadow-sm' : 'text-slate-600 hover:text-slate-900'}`}
+                >
+                  Todos ({stakeholdersData.length})
+                </button>
+                <button 
+                  onClick={() => setSelectedFilter('interno')}
+                  className={`px-3 py-1.5 rounded-md transition-colors ${selectedFilter === 'interno' ? 'bg-white text-blue-600 shadow-sm' : 'text-slate-600 hover:text-slate-900'}`}
+                >
+                  Internos
+                </button>
+                <button 
+                  onClick={() => setSelectedFilter('externo')}
+                  className={`px-3 py-1.5 rounded-md transition-colors ${selectedFilter === 'externo' ? 'bg-white text-blue-600 shadow-sm' : 'text-slate-600 hover:text-slate-900'}`}
+                >
+                  Externos
+                </button>
+              </div>
+            </div>
+
+            {/* Tabla Detallada de Stakeholders */}
+            <div id="registro-stakeholders" className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="w-full text-left text-sm text-slate-700">
+                  <thead className="bg-slate-100 text-slate-900 font-bold text-xs uppercase tracking-wider border-b border-slate-200">
+                    <tr>
+                      <th className="py-3 px-4">ID / Interesado</th>
+                      <th className="py-3 px-4">Rol & Tipo</th>
+                      <th className="py-3 px-4">Poder / Interés</th>
+                      <th className="py-3 px-4">Involucramiento (Act &rarr; Des)</th>
+                      <th className="py-3 px-4">Expectativas Principales</th>
+                      <th className="py-3 px-4">Estrategia PMBOK</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100">
+                    {filteredStakeholders.map((s) => (
+                      <tr key={s.id} className="hover:bg-slate-50/70 transition-colors">
+                        <td className="py-4 px-4">
+                          <span className="font-mono text-xs font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded border border-blue-100 block w-max mb-1">
+                            {s.id}
+                          </span>
+                          <strong className="text-slate-900 block">{s.nombre}</strong>
+                        </td>
+                        <td className="py-4 px-4">
+                          <span className="text-slate-800 font-medium block text-xs">{s.rol}</span>
+                          <span className={`text-[10px] uppercase font-bold px-2 py-0.5 rounded inline-block mt-1 ${s.tipo === 'interno' ? 'bg-blue-50 text-blue-700' : 'bg-amber-50 text-amber-700'}`}>
+                            {s.tipo}
+                          </span>
+                        </td>
+                        <td className="py-4 px-4">
+                          <div className="text-xs space-y-1">
+                            <div>Poder: <span className="font-bold text-slate-900">{s.poder}</span></div>
+                            <div>Interés: <span className="font-bold text-slate-900">{s.interes}</span></div>
+                          </div>
+                        </td>
+                        <td className="py-4 px-4">
+                          <div className="text-xs">
+                            <span className="text-slate-500">{s.apoyoActual}</span>
+                            <span className="mx-1.5 text-blue-500 font-bold">&rarr;</span>
+                            <span className="font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-100">
+                              {s.apoyoDeseado}
+                            </span>
+                          </div>
+                        </td>
+                        <td className="py-4 px-4 text-xs text-slate-600 max-w-xs">
+                          {s.expectativas}
+                        </td>
+                        <td className="py-4 px-4 text-xs">
+                          <span className="font-semibold text-slate-900 block">{s.estrategia.split('(')[0]}</span>
+                          <span className="text-slate-500 text-[11px] block mt-0.5">{s.estrategia.includes('(') ? s.estrategia.substring(s.estrategia.indexOf('(')) : ''}</span>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Matriz de Evaluación del Involucramiento */}
+            <div id="matriz-involucramiento" className="bg-slate-100 rounded-xl p-6 md:p-8 border border-slate-200">
+              <h4 className="font-bold text-lg text-slate-900 mb-2 flex items-center gap-2">
+                <i className="fas fa-sliders text-emerald-600"></i> Matriz de Evaluación del Involucramiento (Actual vs. Deseado)
+              </h4>
+              <p className="text-xs text-slate-600 mb-6">
+                Representación de brechas donde <strong>C</strong> indica nivel actual (Current) y <strong>D</strong> indica nivel deseado (Desired) según estándar PMBOK.
+              </p>
+
+              <div className="overflow-x-auto bg-white rounded-lg border border-slate-200 p-4">
+                <table className="w-full text-center text-xs text-slate-700">
+                  <thead>
+                    <tr className="border-b border-slate-200 text-slate-900 font-bold uppercase">
+                      <th className="py-2.5 px-3 text-left">Interesado</th>
+                      <th className="py-2.5 px-2">Desconocedor</th>
+                      <th className="py-2.5 px-2">Resistente</th>
+                      <th className="py-2.5 px-2">Neutral</th>
+                      <th className="py-2.5 px-2">Alentador</th>
+                      <th className="py-2.5 px-2">Comprometido</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100 font-medium">
+                    <tr>
+                      <td className="py-2.5 px-3 text-left font-bold text-slate-800">Guido (Gerencia General)</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td className="bg-emerald-50 text-emerald-700 font-bold font-mono">C, D</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2.5 px-3 text-left font-bold text-slate-800">Jefatura de Almacén</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td className="text-blue-600 font-mono font-bold">C</td>
+                      <td className="bg-emerald-50 text-emerald-700 font-mono font-bold">D</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2.5 px-3 text-left font-bold text-slate-800">Asesores de Ventas</td>
+                      <td></td>
+                      <td></td>
+                      <td className="text-amber-600 font-mono font-bold">C</td>
+                      <td className="bg-emerald-50 text-emerald-700 font-mono font-bold">D</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td className="py-2.5 px-3 text-left font-bold text-slate-800">Proveedores de Madera</td>
+                      <td></td>
+                      <td></td>
+                      <td className="text-slate-600 font-mono font-bold">C</td>
+                      <td className="bg-emerald-50 text-emerald-700 font-mono font-bold">D</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
