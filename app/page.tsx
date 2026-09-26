@@ -606,7 +606,7 @@ export default function Home() {
             </div>
 
             {/* ========================================================
-                LIENZO BUSINESS MODEL CANVAS DEL PROYECTO TI
+                LIENZO BUSINESS MODEL CANVAS (SITUACIÓN ACTUAL)
                ======================================================== */}
             <div id="lienzo-canvas" className="space-y-6 pt-4">
               <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
@@ -615,10 +615,10 @@ export default function Home() {
                     Estrategia &bull; Business Model Canvas
                   </div>
                   <h3 className="font-bold text-2xl md:text-3xl text-slate-900 tracking-tight">
-                    Lienzo Canvas del Proyecto TI: Inversiones Guido
+                    Lienzo Canvas (Situación Actual "As-Is")
                   </h3>
                   <p className="text-slate-500 text-sm mt-1">
-                    Arquitectura estratégica del proyecto de Infraestructura Tecnológica de Redes y Servicios Cloud POS
+                    Arquitectura del modelo de negocio de Inversiones Guido previo a la implementación tecnológica.
                   </p>
                 </div>
                 <span className="text-xs font-semibold bg-white text-slate-700 px-3 py-1.5 rounded-lg border border-slate-200 shadow-xs flex items-center gap-1.5 w-max">
@@ -642,23 +642,19 @@ export default function Home() {
                       <ul className="space-y-2.5 text-xs text-slate-600 leading-relaxed">
                         <li className="flex items-start gap-2">
                           <span className="text-blue-500 font-bold">&bull;</span>
-                          <span><strong>Proveedor Cloud & TI:</strong> Enlace, hosting y soporte de plataforma SaaS para inventario y facturación.</span>
+                          <span><strong>Proveedores de Tableros:</strong> Empresas como Pelikano o Novopan (melamina y MDF).</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="text-blue-500 font-bold">&bull;</span>
-                          <span><strong>Proveedores de Hardware:</strong> Terminales POS físicas, switches, cableado Cat 6 y lectoras ópticas.</span>
+                          <span><strong>Proveedores de Herrajes:</strong> Marcas como Ducasse (bisagras, rieles, jaladores).</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="text-blue-500 font-bold">&bull;</span>
-                          <span><strong>SUNAT:</strong> Validación fiscal y recepción directa de comprobantes electrónicos (OSE/PSE).</span>
+                          <span><strong>Transportistas de Carga:</strong> Servicios tercerizados para despacho y entrega a volumen.</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="text-blue-500 font-bold">&bull;</span>
-                          <span><strong>Distribuidores de Madera y Herrajes:</strong> Aprovisionamiento en Lima Sur (Ducasse, tableros melamínicos).</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-blue-500 font-bold">&bull;</span>
-                          <span><strong>Equipo Formulador UNTELS:</strong> Consultores y evaluadores de factibilidad técnica/económica (PMBOK).</span>
+                          <span><strong>Mano de Obra Especializada:</strong> Instaladores independientes para proyectos grandes.</span>
                         </li>
                       </ul>
                     </div>
@@ -675,23 +671,19 @@ export default function Home() {
                       <ul className="space-y-2 text-xs text-slate-600 leading-relaxed">
                         <li className="flex items-start gap-2">
                           <span className="text-indigo-500 font-bold">&bull;</span>
-                          <span>Tendido y certificación de cableado estructurado Cat 6 entre almacén y tienda.</span>
+                          <span>Diseño y cotización manual de muebles a medida.</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="text-indigo-500 font-bold">&bull;</span>
-                          <span>Montaje físico y configuración de terminales POS, lectoras de barras e impresoras térmicas.</span>
+                          <span>Corte, canteado y perforación de tableros.</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="text-indigo-500 font-bold">&bull;</span>
-                          <span>Parametrización del catálogo de muebles y conexión con API SUNAT.</span>
+                          <span>Ensamblaje y acabados de carpintería.</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="text-indigo-500 font-bold">&bull;</span>
-                          <span>Pruebas de conectividad, red y sincronización en tiempo real.</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-indigo-500 font-bold">&bull;</span>
-                          <span>Capacitación práctica del personal de caja y almacén.</span>
+                          <span>Control de inventario (actualmente manual).</span>
                         </li>
                       </ul>
                     </div>
@@ -705,19 +697,15 @@ export default function Home() {
                       <ul className="space-y-2 text-xs text-slate-600 leading-relaxed">
                         <li className="flex items-start gap-2">
                           <span className="text-indigo-500 font-bold">&bull;</span>
-                          <span><strong>Infraestructura de Red:</strong> Cable UTP Cat 6, switch gestionable y puntos de acceso Wi-Fi.</span>
+                          <span><strong>Físicos:</strong> Taller de maquinarias, showroom.</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="text-indigo-500 font-bold">&bull;</span>
-                          <span><strong>Hardware Físico:</strong> Terminales táctiles POS, lectoras de barras e impresoras térmicas.</span>
+                          <span><strong>Materiales:</strong> Stock de tableros y herrajes.</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="text-indigo-500 font-bold">&bull;</span>
-                          <span><strong>Servicios Cloud:</strong> Plataforma SaaS para facturación electrónica y kardex de inventario.</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-indigo-500 font-bold">&bull;</span>
-                          <span><strong>Personal Operativo:</strong> Asesores en showroom y formuladores UNTELS.</span>
+                          <span><strong>Humanos:</strong> Carpinteros, asesores, operarios.</span>
                         </li>
                       </ul>
                     </div>
@@ -736,29 +724,21 @@ export default function Home() {
                       <ul className="space-y-3.5 text-xs text-emerald-50 leading-relaxed">
                         <li className="flex items-start gap-2.5">
                           <i className="fas fa-circle-check text-emerald-300 mt-0.5 shrink-0 text-xs"></i>
-                          <span><strong>Control de Stock en Tiempo Real:</strong> Sincronización instantánea de inventario entre taller y tienda (cero quiebres de existencias).</span>
+                          <span><strong>Muebles a Medida:</strong> Diseño y fabricación de muebles modulares adaptados al requerimiento de cada cliente.</span>
                         </li>
                         <li className="flex items-start gap-2.5">
                           <i className="fas fa-circle-check text-emerald-300 mt-0.5 shrink-0 text-xs"></i>
-                          <span><strong>Atención y Facturación Ágil:</strong> Reducción del tiempo de cobro en caja de 8 minutos a menos de 45 segundos por transacción.</span>
+                          <span><strong>Calidad en Materiales:</strong> Uso de melamina de alta durabilidad y accesorios de marcas reconocidas.</span>
                         </li>
                         <li className="flex items-start gap-2.5">
                           <i className="fas fa-circle-check text-emerald-300 mt-0.5 shrink-0 text-xs"></i>
-                          <span><strong>Erradicación del Registro en Papel:</strong> Eliminación de kardex manuales y pérdidas de comprobantes en el showroom.</span>
+                          <span><strong>Soluciones Integrales:</strong> Desde venta de tableros enteros hasta ensamblaje de módulos completos.</span>
                         </li>
                         <li className="flex items-start gap-2.5">
-                          <i className="fas fa-circle-check text-emerald-300 mt-0.5 shrink-0 text-xs"></i>
-                          <span><strong>Trazabilidad y Menos Quejas:</strong> Reducción del 35% de reclamos por entrega de piezas dañadas o pedidos errados.</span>
-                        </li>
-                        <li className="flex items-start gap-2.5">
-                          <i className="fas fa-circle-check text-emerald-300 mt-0.5 shrink-0 text-xs"></i>
-                          <span><strong>Despliegue Rápido (Cero Código):</strong> Implementación 100% sobre hardware estandarizado y servicios cloud probados.</span>
+                          <i className="fas fa-circle-exclamation text-amber-400 mt-0.5 shrink-0 text-xs"></i>
+                          <span className="text-amber-100"><strong>Dolor Operativo Actual:</strong> La experiencia de compra sufre demoras por cotizaciones manuales, desorden en almacén y filas en caja por falta de tecnología.</span>
                         </li>
                       </ul>
-                    </div>
-                    <div className="mt-4 pt-3 border-t border-emerald-700/50 text-[11px] text-emerald-200 font-semibold flex items-center justify-between">
-                      <span>Cumplimiento SUNAT</span>
-                      <span className="font-mono">RUC 20563735865</span>
                     </div>
                   </div>
 
@@ -773,19 +753,15 @@ export default function Home() {
                       <ul className="space-y-2 text-xs text-slate-600 leading-relaxed">
                         <li className="flex items-start gap-2">
                           <span className="text-amber-500 font-bold">&bull;</span>
-                          <span>Atención personalizada y transparente con tickets detallados y código QR.</span>
+                          <span>Atención cara a cara y consultoría en diseño presencial.</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="text-amber-500 font-bold">&bull;</span>
-                          <span>Capacitación y acompañamiento continuo a vendedores y almacenistas.</span>
+                          <span>Cotizaciones elaboradas a mano con papel y lápiz en tienda.</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="text-amber-500 font-bold">&bull;</span>
-                          <span>Soporte técnico directo con el proveedor cloud (SLA 99.8% disponibilidad).</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-amber-500 font-bold">&bull;</span>
-                          <span>Informes mensuales ejecutivos de ventas y rotación para Gerencia.</span>
+                          <span>Garantía de fabricación directa sin intermediarios.</span>
                         </li>
                       </ul>
                     </div>
@@ -799,19 +775,15 @@ export default function Home() {
                       <ul className="space-y-2 text-xs text-slate-600 leading-relaxed">
                         <li className="flex items-start gap-2">
                           <span className="text-amber-500 font-bold">&bull;</span>
-                          <span><strong>Puntos de Venta Físicos (POS):</strong> Cajas con terminales táctiles, lectoras e impresoras térmicas.</span>
+                          <span><strong>Físico:</strong> Showroom / Tienda principal en VES.</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="text-amber-500 font-bold">&bull;</span>
-                          <span><strong>Estaciones de Almacén:</strong> Lectoras de código de barras para recepción y despacho.</span>
+                          <span><strong>Boca a Boca:</strong> Recomendación directa de clientes.</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="text-amber-500 font-bold">&bull;</span>
-                          <span><strong>Dashboard Cloud:</strong> Panel web administrativo para supervisión directiva de existencias.</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-amber-500 font-bold">&bull;</span>
-                          <span><strong>Canal Digital:</strong> Envío de tickets electrónicos a clientes vía email/WhatsApp.</span>
+                          <span><strong>Vía Telefónica:</strong> Coordinación de entregas básicas.</span>
                         </li>
                       </ul>
                     </div>
@@ -827,23 +799,15 @@ export default function Home() {
                       <ul className="space-y-2.5 text-xs text-slate-600 leading-relaxed">
                         <li className="flex items-start gap-2">
                           <span className="text-teal-600 font-bold">&bull;</span>
-                          <span><strong>Clientes Finales de Muebles:</strong> Familias y oficinas que buscan rapidez, stock exacto y boletas SUNAT.</span>
+                          <span><strong>Mercado Masivo (B2C):</strong> Familias que buscan renovar repisas y mobiliario a buen precio.</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="text-teal-600 font-bold">&bull;</span>
-                          <span><strong>Gerencia General (Sponsor):</strong> Tomador de decisiones que exige rentabilidad, control y cero multas.</span>
+                          <span><strong>Mercado Corporativo (B2B):</strong> Oficinas que requieren acondicionamiento de espacios.</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="text-teal-600 font-bold">&bull;</span>
-                          <span><strong>Asesores de Ventas y Cajeros:</strong> Usuarios en tienda que requieren equipos rápidos sin caídas de red.</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-teal-600 font-bold">&bull;</span>
-                          <span><strong>Personal de Almacén:</strong> Responsables del control de inventario físico y despacho de piezas.</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-teal-600 font-bold">&bull;</span>
-                          <span><strong>Comercio de Villa El Salvador:</strong> Entorno local que percibe la formalidad y modernización del negocio.</span>
+                          <span><strong>Carpinteros (B2B):</strong> Técnicos que compran planchas y herrajes.</span>
                         </li>
                       </ul>
                     </div>
@@ -863,19 +827,19 @@ export default function Home() {
                     <ul className="space-y-2 text-xs text-slate-600 leading-relaxed">
                       <li className="flex items-start gap-2">
                         <span className="text-rose-500 font-bold">&bull;</span>
-                        <span><strong>Adquisición de Hardware Inicial:</strong> Compra de terminales táctiles POS, lectoras de código de barras e impresoras térmicas.</span>
+                        <span><strong>Materia Prima e Insumos:</strong> Compra de madera, melamina, MDF y herrajes (bisagras, rieles).</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-rose-500 font-bold">&bull;</span>
-                        <span><strong>Infraestructura de Red y Cableado:</strong> Insumos de cableado estructurado Cat 6, canaletas, switch gestionable y router.</span>
+                        <span><strong>Mano de Obra Directa:</strong> Sueldos de carpinteros, operarios de máquinas y vendedores.</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-rose-500 font-bold">&bull;</span>
-                        <span><strong>Suscripción Mensual Cloud / SaaS:</strong> Tarifa periódica por el servicio cloud de punto de venta, inventario y facturación OSE.</span>
+                        <span><strong>Costos Fijos Operativos:</strong> Alquiler de la nave industrial y showroom, pago de energía eléctrica.</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-rose-500 font-bold">&bull;</span>
-                        <span><strong>Capacitación y Puesta en Marcha:</strong> Talleres de adaptación para el personal operativo y pruebas de estrés de red.</span>
+                        <span><strong>Costos Ocultos por Ineficiencia:</strong> Pérdidas por merma de material y multas tributarias por mala facturación.</span>
                       </li>
                     </ul>
                   </div>
@@ -883,21 +847,25 @@ export default function Home() {
                   {/* FUENTES DE INGRESOS / RETORNO DE VALOR */}
                   <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs hover:border-slate-300 transition-colors">
                     <h4 className="font-black text-xs uppercase tracking-wider text-slate-800 pb-3 mb-3 border-b border-slate-100 flex items-center justify-between">
-                      <span>Fuentes de Ingresos / Retorno de Valor</span>
+                      <span>Fuentes de Ingresos</span>
                       <i className="fas fa-chart-line text-emerald-600 text-sm"></i>
                     </h4>
                     <ul className="space-y-2 text-xs text-slate-600 leading-relaxed">
                       <li className="flex items-start gap-2">
                         <span className="text-emerald-600 font-bold">&bull;</span>
-                        <span><strong>Ahorro en Horas-Hombre y Papelería:</strong> Eliminación de talonarios manuales, kardex impresos y auditorías manuales lentas.</span>
+                        <span><strong>Venta Directa de Muebles:</strong> Ingreso principal por armarios, repisas y módulos terminados.</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-emerald-600 font-bold">&bull;</span>
-                        <span><strong>Aumento en Ventas por Rapidez en Caja:</strong> Mayor capacidad de atención en horas punta del Parque Industrial de VES sin generar colas.</span>
+                        <span><strong>Venta de Insumos:</strong> Venta al por menor de piezas cortadas y tableros enteros.</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-emerald-600 font-bold">&bull;</span>
-                        <span><strong>Reducción del 30% en Costos de Almacenamiento:</strong> Eliminación de sobrestock y quiebres mediante control digital en tiempo real.</span>
+                        <span><strong>Servicios Adicionales:</strong> Cobros por corte especial, canteado y ensamblaje a domicilio.</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-emerald-600 font-bold">&bull;</span>
+                        <span><strong>Mecanismo de Pago:</strong> Efectivo y transferencias gestionadas de forma 100% manual.</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-emerald-600 font-bold">&bull;</span>
