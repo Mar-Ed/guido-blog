@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import analysis from "../data/project-analysis.json";
 import { AnalysisTreeGraphic, AlternativesGraphic, type AnalysisTree } from "./AnalysisGraphics";
+import AlternativeEvaluation, { AlternativeActions } from "./AlternativeEvaluation";
 
 const linkStyle = "inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-700 transition-colors hover:border-blue-300 hover:text-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600";
 
@@ -70,9 +71,12 @@ export default function ProjectAnalysis() {
           Del registro en papel y hojas de cálculo a una propuesta de redes y servicios cloud que apoye el inventario, las ventas, la comunicación entre almacén y tienda y la facturación electrónica.
         </p>
         <nav aria-label="Contenido del análisis" className="flex flex-wrap gap-2">
-          <a className={linkStyle} href="#arbol-problemas">1. Problema</a>
-          <a className={linkStyle} href="#arbol-objetivos">2. Objetivos</a>
-          <a className={linkStyle} href="#alternativas-solucion">3. Alternativas</a>
+          <a className={linkStyle} href="#arbol-problemas">Problema</a>
+          <a className={linkStyle} href="#arbol-objetivos">Objetivos</a>
+          <a className={linkStyle} href="#alternativas-solucion">Alternativas</a>
+          <a className={linkStyle} href="#acciones-alternativas">Acciones</a>
+          <a className={linkStyle} href="#evaluacion-alternativas">Evaluación</a>
+          <a className={linkStyle} href="#analisis-economico">Costos y beneficios</a>
         </nav>
         <p className="max-w-3xl border-l-2 border-blue-300 pl-4 text-sm leading-relaxed text-slate-600">
           Base del análisis: diagnóstico empresarial y evidencias del blog. La <a href="#primera-entrevista" className="font-semibold text-blue-700 underline underline-offset-4">primera entrevista</a> aporta la trayectoria familiar y los retos logísticos. La capacidad de red, los equipos y los procedimientos se contrastarán en el levantamiento técnico.
@@ -81,7 +85,7 @@ export default function ProjectAnalysis() {
 
       <section id="arbol-problemas" aria-labelledby="arbol-problemas-titulo" className="scroll-mt-24 space-y-5">
         <div>
-          <h3 id="arbol-problemas-titulo" className="text-2xl font-bold text-slate-900">1. Análisis del problema</h3>
+          <h3 id="arbol-problemas-titulo" className="text-2xl font-bold text-slate-900">Análisis del problema</h3>
           <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">
             Las causas indirectas alimentan tres causas directas. Estas explican el problema central y sus posibles efectos en los pedidos, la facturación y el servicio.
           </p>
@@ -95,7 +99,7 @@ export default function ProjectAnalysis() {
 
       <section id="arbol-objetivos" aria-labelledby="arbol-objetivos-titulo" className="scroll-mt-24 space-y-5">
         <div>
-          <h3 id="arbol-objetivos-titulo" className="text-2xl font-bold text-slate-900">2. Análisis de objetivos</h3>
+          <h3 id="arbol-objetivos-titulo" className="text-2xl font-bold text-slate-900">Análisis de objetivos</h3>
           <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">
             Cada condición negativa se transforma en una situación deseada. Se conserva la correspondencia entre las ramas de ambos árboles.
           </p>
@@ -133,11 +137,12 @@ export default function ProjectAnalysis() {
 
       <section id="alternativas-solucion" aria-labelledby="alternativas-solucion-titulo" className="scroll-mt-24 space-y-6">
         <div>
-          <h3 id="alternativas-solucion-titulo" className="text-2xl font-bold text-slate-900">3. Alternativas de solución</h3>
+          <h3 id="alternativas-solucion-titulo" className="text-2xl font-bold text-slate-900">6. Alternativas de solución</h3>
           <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">
             Se comparan tres formas de atender el problema. El alcance comprende adquisición de equipos, instalación de redes, contratación y configuración de servicios existentes y mejora de procesos.
           </p>
         </div>
+        <h4 className="text-xl font-bold text-slate-900">6.1. Proyectos alternativos planteados</h4>
         <GraphicFrame title="Alternativas de solución" file="alternativas-solucion-guido">
           <AlternativesGraphic alternatives={analysis.alternatives} recommendation={analysis.recommendation} />
         </GraphicFrame>
@@ -145,7 +150,7 @@ export default function ProjectAnalysis() {
           {analysis.alternatives.map((alternative) => (
             <article key={alternative.id} className={`rounded-xl border p-5 ${alternative.id === "A3" ? "border-teal-300 bg-teal-50/60" : "border-slate-200 bg-white"}`}>
               <p className="text-xs font-bold uppercase tracking-wider text-blue-700">{alternative.id} · {alternative.id === "A3" ? "Priorizar evaluación" : "Alternativa"}</p>
-              <h4 className="mt-2 text-lg font-bold text-slate-900">{alternative.name}</h4>
+              <h5 className="mt-2 text-lg font-bold text-slate-900">{alternative.name}</h5>
               <p className="mt-3 text-sm leading-relaxed text-slate-700">{alternative.description}</p>
               <dl className="mt-4 space-y-3 text-sm leading-relaxed">
                 <div><dt className="font-semibold text-slate-900">Aporte esperado</dt><dd className="text-slate-700">{alternative.advantage}</dd></div>
@@ -155,35 +160,7 @@ export default function ProjectAnalysis() {
             </article>
           ))}
         </div>
-        <div className="overflow-x-auto rounded-xl border border-slate-200 bg-white">
-          <table className="w-full min-w-[720px] text-left text-sm leading-relaxed">
-            <caption className="px-5 py-4 text-left text-base font-bold text-slate-900">Comparación cualitativa preliminar</caption>
-            <thead className="border-y border-slate-200 bg-slate-50 text-slate-900">
-              <tr><th scope="col" className="p-4">Criterio</th>{analysis.alternatives.map((alternative) => <th scope="col" key={alternative.id} className="p-4">{alternative.id}<span className="mt-1 block font-normal text-slate-600">{alternative.name}</span></th>)}</tr>
-            </thead>
-            <tbody className="divide-y divide-slate-100">
-              {analysis.criteria.map((criterion) => <tr key={criterion.name}><th scope="row" className="p-4 align-top font-semibold text-slate-900">{criterion.name}</th>{criterion.values.map((value, index) => <td key={index} className="p-4 align-top text-slate-700">{value}</td>)}</tr>)}
-            </tbody>
-          </table>
-        </div>
-        <div className="rounded-xl bg-slate-900 p-5 text-white sm:p-6">
-          <h4 className="font-bold text-teal-200">Recomendación preliminar</h4>
-          <p className="mt-3 max-w-3xl text-base leading-relaxed">{analysis.recommendation}</p>
-          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-300">La continuidad se evaluará según Internet, respaldo eléctrico, recuperación de datos y condiciones del proveedor. La comparación económica incluirá inversión inicial y costos recurrentes.</p>
-        </div>
-        <div>
-          <h4 className="text-lg font-bold text-slate-900">Medios y acciones complementarias de la alternativa A3</h4>
-          <div className="mt-4 grid gap-4 xl:grid-cols-3">
-            {analysis.axes.map((axis, index) => (
-              <article key={axis.title} className="rounded-xl border border-slate-200 bg-white p-5">
-                <p className="text-xs font-bold uppercase tracking-wider text-teal-700">Eje {index + 1}</p>
-                <h5 className="mt-2 font-bold text-slate-900">{axis.title}</h5>
-                <p className="mt-3 text-sm leading-relaxed text-slate-700"><strong>Medio fundamental: </strong>{axis.means}</p>
-                <ol className="mt-4 list-decimal space-y-3 pl-5 text-sm leading-relaxed text-slate-700">{axis.actions.map((action) => <li key={action}>{action}</li>)}</ol>
-              </article>
-            ))}
-          </div>
-        </div>
+        <AlternativeActions />
         <aside className="border-t border-slate-200 pt-5 text-sm leading-relaxed text-slate-600" aria-label="Alcance y referencias técnicas">
           <p className="max-w-3xl">La infraestructura brinda conectividad y equipos de acceso. El registro y la emisión de comprobantes requieren configurar herramientas o servicios existentes compatibles y verificar el mecanismo de emisión electrónica aplicable. El proyecto se concentra en infraestructura TI y su puesta en operación.</p>
           <p className="mt-3 font-semibold text-slate-800">Referencias técnicas para validar la propuesta</p>
@@ -194,6 +171,7 @@ export default function ProjectAnalysis() {
           </ul>
         </aside>
       </section>
+      <AlternativeEvaluation />
     </section>
   );
 }

@@ -40,12 +40,17 @@ El proyecto aborda el **Proceso de Identificación de Stakeholders** basado en e
 - Comparación de mejora local, infraestructura centralizada y redes con servicios cloud gestionados.
 - Gráficos descargables en PNG y SVG, y una versión en texto de cada árbol.
 - Metas propuestas y aspectos pendientes de validación diferenciados de las evidencias del diagnóstico.
+- **6.2. Identificación y organización de acciones:** acciones comunes y paquetes específicos de A1, A2 y A3, entregables y responsables propuestos.
+- **7. Evaluación y justificación de alternativas**, con requisitos mínimos y comparación cualitativa en **7.1**, más una ponderación propuesta pendiente de calificaciones sustentadas.
+- **7.2. Análisis costo-beneficio y costo-efectividad:** costos y beneficios por medir, fórmulas de VAN, B/C y CE, y datos necesarios para calcularlos. Los importes y resultados económicos permanecen pendientes de cotización y medición.
 
 El contenido está en `app/data/project-analysis.json`. Para regenerar los gráficos después de editarlo:
 
 ```bash
 node scripts/export-project-analysis.mjs
 ```
+
+Las acciones organizadas y los criterios de evaluación están en `app/data/alternative-evaluation.json`. Las referencias metodológicas se enlazan en el apartado económico del blog.
 
 2. **2. Entradas e Insumos:**
    - Caso de Negocio (Business Case de equipamiento hardware y servicios cloud).

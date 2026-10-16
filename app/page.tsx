@@ -244,6 +244,9 @@ export default function Home() {
                 ['arbol-problemas', 'Árbol de problemas'],
                 ['arbol-objetivos', 'Árbol de objetivos'],
                 ['alternativas-solucion', 'Alternativas de solución'],
+                ['acciones-alternativas', '6.2. Acciones por alternativa'],
+                ['evaluacion-alternativas', '7. Evaluación y justificación'],
+                ['analisis-economico', '7.2. Costos y beneficios'],
               ].map(([id, label]) => (
                 <li key={id}>
                   <button type="button" onClick={() => scrollTo(id, 'analisis')} className="min-h-11 w-full rounded-r-md py-2 pl-4 text-left text-sm text-slate-600 transition-colors hover:bg-slate-50 hover:text-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">{label}</button>
