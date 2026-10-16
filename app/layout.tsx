@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Infraestructura Tecnológica de Redes y Servicios Cloud POS - Inversiones Guido | UNTELS",
-  description: "Formulación y Evaluación de Factibilidad para la Implementación de Infraestructura Tecnológica de Redes y Servicios Cloud POS en la MYPE Inversiones Guido (INVERSIONES GRANDES IDEAS S.A.C - RUC 20563735865) - UNTELS",
+  title: "Redes y servicios cloud para inventario, ventas y facturación | Inversiones Guido",
+  description: "Implementación de infraestructura de redes y servicios cloud en Inversiones Guido para conectar almacén y tienda y facilitar el registro de inventario, ventas y la facturación electrónica ante SUNAT. Proyecto de infraestructura TI - UNTELS.",
 };
 
 export default function RootLayout({

@@ -1,0 +1,211 @@
+{
+  "problem": {
+    "title": "Árbol de problemas",
+    "subtitle": "Registro de inventario y ventas, comunicación almacén–tienda y soporte a la facturación",
+    "final": {
+      "label": "Efecto final",
+      "text": "Riesgo de menor rentabilidad y deterioro del servicio al cliente de Inversiones Guido."
+    },
+    "indirect": [
+      {
+        "label": "Efecto indirecto 1.1",
+        "text": "Mayores costos y tiempo dedicados a conciliar y corregir registros."
+      },
+      {
+        "label": "Efecto indirecto 1.2",
+        "text": "Riesgo de ventas perdidas y menor confianza del cliente."
+      }
+    ],
+    "direct": {
+      "label": "Efecto directo 1",
+      "text": "Demoras y errores al confirmar stock, preparar pedidos y sustentar la facturación."
+    },
+    "central": {
+      "label": "Problema central",
+      "text": "Registro fragmentado de inventario y ventas y comunicación limitada entre el almacén y la tienda de Inversiones Guido."
+    },
+    "branches": [
+      {
+        "label": "Causa directa 1",
+        "text": "Registros manuales y dispersos de inventario y ventas.",
+        "children": [
+          {
+            "label": "Causa indirecta 1.1",
+            "text": "Entradas, salidas y ventas registradas en papel y archivos separados."
+          },
+          {
+            "label": "Causa indirecta 1.2",
+            "text": "Digitación repetida entre apuntes y hojas de cálculo."
+          }
+        ]
+      },
+      {
+        "label": "Causa directa 2",
+        "text": "Conectividad y equipamiento insuficientes para una operación integrada.",
+        "validation": "Por validar en visita técnica",
+        "children": [
+          {
+            "label": "Causa indirecta 2.1",
+            "text": "Puntos de conexión y cobertura sin dimensionar para los puestos requeridos."
+          },
+          {
+            "label": "Causa indirecta 2.2",
+            "text": "Capacidad de Internet y enlace entre áreas pendientes de diagnóstico técnico."
+          }
+        ]
+      },
+      {
+        "label": "Causa directa 3",
+        "text": "Coordinación y control operativo poco estandarizados.",
+        "validation": "Por validar con responsables",
+        "children": [
+          {
+            "label": "Causa indirecta 3.1",
+            "text": "Procedimientos, responsables y capacitación para el registro aún por estandarizar."
+          }
+        ]
+      }
+    ],
+    "note": "Síntesis del diagnóstico del blog. Las causas de conectividad, equipamiento y procedimientos requieren validación; los efectos son riesgos analizados, no pérdidas cuantificadas."
+  },
+  "objective": {
+    "title": "Árbol de objetivos",
+    "subtitle": "La misma estructura causal, expresada como medios, objetivo central y fines",
+    "final": {
+      "label": "Fin final",
+      "text": "Contribuir a la rentabilidad y a un servicio confiable para los clientes de Inversiones Guido."
+    },
+    "indirect": [
+      {
+        "label": "Fin indirecto 1.1",
+        "text": "Disminuir el tiempo y el costo de conciliación y corrección de registros."
+      },
+      {
+        "label": "Fin indirecto 1.2",
+        "text": "Fortalecer la confianza del cliente y reducir el riesgo de perder ventas."
+      }
+    ],
+    "direct": {
+      "label": "Fin directo 1",
+      "text": "Disponer de información oportuna y verificable para confirmar stock, preparar pedidos y sustentar la facturación."
+    },
+    "central": {
+      "label": "Objetivo central · SMART",
+      "text": "Implementar, en 12 semanas desde la aprobación del proyecto, infraestructura de redes y servicios cloud que conecte almacén y tienda de Inversiones Guido y habilite el registro de inventario, ventas y comprobantes electrónicos en el 100 % de los puestos operativos definidos en el diagnóstico, con pruebas de conectividad y registro satisfactorias."
+    },
+    "branches": [
+      {
+        "label": "Medio directo 1",
+        "text": "Registros de inventario y ventas organizados y accesibles.",
+        "children": [
+          {
+            "label": "Medio fundamental 1.1",
+            "text": "Formato unificado para registrar entradas, salidas y ventas."
+          },
+          {
+            "label": "Medio fundamental 1.2",
+            "text": "Captura y verificación de datos en herramientas existentes configuradas."
+          }
+        ]
+      },
+      {
+        "label": "Medio directo 2",
+        "text": "Infraestructura de red y equipos adecuados para conectar ambas áreas.",
+        "children": [
+          {
+            "label": "Medio fundamental 2.1",
+            "text": "Puntos cableados y cobertura Wi-Fi dimensionados según puestos y espacios."
+          },
+          {
+            "label": "Medio fundamental 2.2",
+            "text": "Internet y servicios cloud configurados para el acceso desde ambas áreas."
+          }
+        ]
+      },
+      {
+        "label": "Medio directo 3",
+        "text": "Coordinación y control operativo estandarizados.",
+        "children": [
+          {
+            "label": "Medio fundamental 3.1",
+            "text": "Responsables capacitados y procedimientos de registro y conciliación definidos."
+          }
+        ]
+      }
+    ],
+    "note": "Meta de la intervención propuesta. Las 12 semanas y el 100 % de cobertura se validarán con el diagnóstico, el presupuesto y la gerencia. El trabajo académico evalúa su factibilidad."
+  },
+  "alternatives": [
+    {
+      "id": "A1",
+      "name": "Mejora local y estandarización",
+      "description": "Reutilizar equipos, mejorar la red local y ordenar los registros y procedimientos actuales.",
+      "includes": "Adecuaciones de red, revisión de equipos, formatos de registro y capacitación.",
+      "advantage": "Permite atender el orden operativo aprovechando recursos disponibles.",
+      "limitation": "La coordinación entre áreas continúa dependiendo del intercambio y conciliación de archivos.",
+      "cost": "Equipos, adecuaciones y capacitación por cotizar."
+    },
+    {
+      "id": "A2",
+      "name": "Infraestructura centralizada local",
+      "description": "Concentrar los recursos en un servidor local, con red, respaldo eléctrico y acceso entre áreas.",
+      "includes": "Servidor, switches, cableado, UPS, copias de seguridad y conectividad entre locales si corresponde.",
+      "advantage": "Permite administrar localmente la infraestructura y los recursos compartidos.",
+      "limitation": "Requiere mantenimiento del servidor, protección física y recuperación ante fallos.",
+      "cost": "Servidor, instalación, energía, soporte y reposición por cotizar."
+    },
+    {
+      "id": "A3",
+      "name": "Redes y servicios cloud gestionados",
+      "description": "Combinar red cableada y Wi-Fi donde se requiera con equipos operativos y servicios cloud existentes.",
+      "includes": "Red, Internet, puestos de trabajo, UPS y contratación y configuración de servicios compatibles.",
+      "advantage": "Se ajusta al acceso desde almacén y tienda mediante servicios compartidos.",
+      "limitation": "Depende de Internet, condiciones del proveedor y una correcta gestión de accesos y datos.",
+      "cost": "Equipos e instalación, suscripciones, Internet y soporte por cotizar."
+    }
+  ],
+  "criteria": [
+    {
+      "name": "Comunicación almacén–tienda",
+      "values": ["Intercambio de registros y conciliación.", "Red y enlace entre áreas por diseñar.", "Acceso desde ambas áreas mediante Internet."]
+    },
+    {
+      "name": "Registro de inventario y ventas",
+      "values": ["Formatos y herramientas actuales ordenados.", "Herramientas existentes compatibles por configurar.", "Servicio comercial compatible por verificar y configurar."]
+    },
+    {
+      "name": "Soporte a la facturación",
+      "values": ["Mantener y revisar el mecanismo de emisión existente.", "Verificar compatibilidad con el mecanismo de emisión.", "Verificar el servicio de emisión electrónica y sus autorizaciones."]
+    },
+    {
+      "name": "Continuidad operativa",
+      "values": ["Respaldos y recuperación de archivos por definir.", "Servidor, UPS, copias y recuperación bajo gestión local.", "Internet, UPS y continuidad del servicio contratada por evaluar."]
+    },
+    {
+      "name": "Mantenimiento y seguridad",
+      "values": ["Equipos y registros bajo gestión interna.", "Servidor, red, accesos y respaldos con soporte especializado.", "Responsabilidades compartidas entre empresa y proveedor."]
+    },
+    {
+      "name": "Evaluación económica",
+      "values": ["Cotizar adecuaciones y horas de operación.", "Cotizar inversión y mantenimiento de infraestructura propia.", "Cotizar inversión inicial y pagos recurrentes del servicio."]
+    }
+  ],
+  "recommendation": "Priorizar el estudio de A3 por su correspondencia con la propuesta de redes y cloud y el acceso desde almacén y tienda. La selección definitiva depende de cotizaciones, diagnóstico técnico, compatibilidad y capacidad de operación.",
+  "axes": [
+    {
+      "title": "Conectividad y equipos",
+      "means": "Infraestructura dimensionada para los puestos y espacios de trabajo.",
+      "actions": ["Levantar el plano, las distancias, el acceso a Internet y el inventario de equipos.", "Cotizar cableado, switches, puntos de acceso, puestos y respaldo eléctrico."]
+    },
+    {
+      "title": "Servicios cloud y facturación",
+      "means": "Servicios existentes compatibles con los registros y el mecanismo de emisión electrónica.",
+      "actions": ["Comparar proveedores, costos recurrentes, soporte, exportación de datos y condiciones de continuidad.", "Validar con el proveedor el registro de inventario, ventas y comprobantes, junto con los permisos aplicables."]
+    },
+    {
+      "title": "Procesos y personas",
+      "means": "Procedimientos claros y responsables preparados para operar la propuesta.",
+      "actions": ["Definir responsables de entradas, salidas, ventas, conciliación y administración de accesos.", "Planificar capacitación y pruebas de registro, conectividad, respaldo y recuperación."]
+    }
+  ]
+}

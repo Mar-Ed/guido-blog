@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from 'react';
+import FirstInterview from './components/FirstInterview';
+import ProjectAnalysis from './components/ProjectAnalysis';
 
 export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -12,7 +14,8 @@ export default function Home() {
     entradas: true,
     herramientas: true,
     salidas: true,
-    empresa: true
+    empresa: true,
+    analisis: true
   });
 
   const toggleMenu = (key: keyof typeof menuOpen) => {
@@ -224,6 +227,31 @@ export default function Home() {
             </ul>
           </div>
 
+          {/* Análisis del proyecto */}
+          <div className="px-4 mb-1">
+            <button
+              type="button"
+              onClick={() => toggleMenu('analisis')}
+              aria-expanded={menuOpen.analisis}
+              aria-controls="menu-analisis"
+              className={`w-full flex items-center justify-between rounded-lg px-4 py-2.5 text-left text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 ${activeSection === 'analisis' ? 'bg-blue-50 text-blue-700' : 'text-slate-700 hover:bg-slate-50'}`}
+            >
+              <span className="flex items-center gap-3"><i className="fas fa-sitemap w-5 text-center text-blue-700" aria-hidden="true"></i>Análisis del proyecto</span>
+              <i className={`fas fa-chevron-${menuOpen.analisis ? 'down' : 'right'} text-xs`} aria-hidden="true"></i>
+            </button>
+            <ul id="menu-analisis" hidden={!menuOpen.analisis} className="mt-1 ml-4 space-y-1 border-l border-slate-200 px-4">
+              {[
+                ['arbol-problemas', 'Árbol de problemas'],
+                ['arbol-objetivos', 'Árbol de objetivos'],
+                ['alternativas-solucion', 'Alternativas de solución'],
+              ].map(([id, label]) => (
+                <li key={id}>
+                  <button type="button" onClick={() => scrollTo(id, 'analisis')} className="min-h-11 w-full rounded-r-md py-2 pl-4 text-left text-sm text-slate-600 transition-colors hover:bg-slate-50 hover:text-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">{label}</button>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* 2. Entradas e Insumos */}
           <div className="px-4 mb-1">
             <button 
@@ -268,8 +296,14 @@ export default function Home() {
               <li onClick={() => scrollTo('tecnicas-recopilacion', 'herramientas')} className="py-1.5 pl-4 text-sm text-slate-600 hover:text-blue-600 cursor-pointer transition-colors rounded-r-md hover:bg-slate-50">
                 Tormentas & Entrevistas
               </li>
-              <li onClick={() => scrollTo('modelo-prominencia', 'herramientas')} className="py-1.5 pl-4 text-sm text-slate-600 hover:text-blue-600 cursor-pointer transition-colors rounded-r-md hover:bg-slate-50">
-                Modelo de Prominencia
+              <li>
+                <button
+                  type="button"
+                  onClick={() => scrollTo('primera-entrevista', 'herramientas')}
+                  className="min-h-11 w-full rounded-r-md py-2 pl-4 text-left text-sm text-slate-600 transition-colors hover:bg-slate-50 hover:text-blue-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                >
+                  Primera entrevista
+                </button>
               </li>
             </ul>
           </div>
@@ -324,16 +358,16 @@ export default function Home() {
 
               {/* Title */}
               <h1 className="font-extrabold text-3xl sm:text-4xl lg:text-[42px] text-slate-900 leading-[1.15] mb-5 tracking-tight">
-                Formulación y Evaluación de Factibilidad para <span className="text-blue-600 relative inline-block">Infraestructura Tecnológica<span className="absolute bottom-1.5 left-0 w-full h-3 bg-blue-100 -z-10 rounded-sm opacity-60"></span></span> de Redes y Cloud POS
+                Implementación de infraestructura de <span className="text-blue-600">redes y servicios cloud</span> para la gestión de inventario, ventas y facturación electrónica en Inversiones Guido
               </h1>
               
               {/* Subtitle / Description */}
               <div className="space-y-4 text-slate-600 mb-8 text-[15px] sm:text-base leading-relaxed">
                 <p>
-                  El presente trabajo aplicativo aborda la <strong>formulación, evaluación de factibilidad y gestión de interesados</strong> para la implementación de una <strong>Infraestructura Tecnológica Integrada de Puntos de Venta (POS) y Servicios Cloud</strong> en la MYPE <strong>INVERSIONES GRANDES IDEAS S.A.C</strong> (Nombre Comercial: <em>Inversiones Guido</em> &bull; RUC: <strong>20563735865</strong>), ubicada en el Parque Industrial de Villa El Salvador.
+                  El presente trabajo aplicativo aborda la <strong>formulación, evaluación de factibilidad y gestión de interesados</strong> para la implementación de una <strong>infraestructura integral de redes, equipamiento y servicios cloud</strong> en la MYPE <strong>INVERSIONES GRANDES IDEAS S.A.C</strong> (Nombre Comercial: <em>Inversiones Guido</em> &bull; RUC: <strong>20563735865</strong>), ubicada en el Parque Industrial de Villa El Salvador.
                 </p>
                 <p className="text-slate-500 text-sm bg-slate-50 p-4 rounded-xl border border-slate-100 shadow-inner">
-                  Actualmente, la empresa presenta deficiencias en su red operativa y gestión de almacén por falta de equipamiento adecuado. El proyecto evalúa la viabilidad de desplegar hardware (lectoras, terminales y red local) conectado a la nube, garantizando control de stock y emisión de comprobantes bajo normativa SUNAT.
+                  La propuesta se centra en la instalación y configuración de redes de comunicación, equipos de punto de venta y servicios cloud para <strong>conectar el almacén con la tienda</strong>. Esta infraestructura dará soporte al <strong>registro de inventario y ventas</strong> y a la <strong>emisión de comprobantes electrónicos ante SUNAT</strong>.
                 </p>
               </div>
 
@@ -615,7 +649,7 @@ export default function Home() {
                     Estrategia &bull; Business Model Canvas
                   </div>
                   <h3 className="font-bold text-2xl md:text-3xl text-slate-900 tracking-tight">
-                    Lienzo Canvas (Situación Actual "As-Is")
+                    Lienzo Canvas (Situación Actual &quot;As-Is&quot;)
                   </h3>
                   <p className="text-slate-500 text-sm mt-1">
                     Arquitectura del modelo de negocio de Inversiones Guido previo a la implementación tecnológica.
@@ -1043,6 +1077,10 @@ export default function Home() {
 
           <hr className="border-slate-200" />
 
+          <ProjectAnalysis />
+
+          <hr className="border-slate-200" />
+
           {/* ========================================================
               SECCIÓN 2: ENTRADAS E INSUMOS DEL PROCESO DE IDENTIFICACIÓN
              ======================================================== */}
@@ -1251,7 +1289,7 @@ export default function Home() {
             </div>
 
             {/* Técnicas de Recopilación */}
-            <div id="tecnicas-recopilacion" className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div id="tecnicas-recopilacion" className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="p-5 rounded-xl bg-white border border-slate-200 shadow-sm">
                 <div className="w-10 h-10 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center text-lg mb-3">
                   <i className="fas fa-brain"></i>
@@ -1265,17 +1303,19 @@ export default function Home() {
                   <i className="fas fa-comments"></i>
                 </div>
                 <h4 className="font-bold text-slate-900 mb-1">Entrevistas Individuales</h4>
-                <p className="text-xs text-slate-600">Cuestionarios directos en la tienda y almacén para evaluar la adaptación al uso de nuevos equipos de cómputo y terminales POS físicas.</p>
-              </div>
-
-              <div id="modelo-prominencia" className="p-5 rounded-xl bg-white border border-slate-200 shadow-sm">
-                <div className="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg mb-3">
-                  <i className="fas fa-diagram-project"></i>
-                </div>
-                <h4 className="font-bold text-slate-900 mb-1">Modelo de Prominencia</h4>
-                <p className="text-xs text-slate-600">Evaluación tridimensional basada en <strong>Poder</strong> (autoridad), <strong>Legitimidad</strong> (relación contractual) y <strong>Urgencia</strong> (necesidad de atención inmediata).</p>
+                <p className="text-xs text-slate-600">Conversaciones con integrantes de la empresa para conocer su trayectoria, operación y retos logísticos como parte del diagnóstico del proyecto TI.</p>
+                <button
+                  type="button"
+                  onClick={() => scrollTo('primera-entrevista', 'herramientas')}
+                  className="mt-3 inline-flex min-h-11 items-center gap-2 rounded-md px-2 text-sm font-semibold text-blue-700 hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                >
+                  Escuchar primera entrevista
+                  <i className="fas fa-arrow-down" aria-hidden="true"></i>
+                </button>
               </div>
             </div>
+
+            <FirstInterview />
           </div>
 
           <hr className="border-slate-200" />

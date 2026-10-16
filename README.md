@@ -1,4 +1,4 @@
-# Formulación y Evaluación de Factibilidad para la Implementación de Infraestructura Tecnológica de Redes y Servicios Cloud POS en la MYPE Inversiones Guido
+# Implementación de infraestructura de redes y servicios cloud para la gestión de inventario, ventas y facturación electrónica en Inversiones Guido
 
 Portal web académico interactivo del proyecto del curso **Formulación de Proyectos TI** desarrollado por estudiantes de Ingeniería de Sistemas de la **Universidad Nacional Tecnológica de Lima Sur (UNTELS)**.
 
@@ -32,6 +32,20 @@ El proyecto aborda el **Proceso de Identificación de Stakeholders** basado en e
    - Componentes de Infraestructura Tecnológica, Redes y Cloud.
    - **Lienzo Business Model Canvas (BMC)** de 9 bloques adaptado al proyecto TI.
    - Galería de evidencias fotográficas de campo (Taller de Fabricación, Oficina Administrativa y Showroom).
+
+**Análisis del problema, objetivos y alternativas de solución:**
+
+- Árbol de problemas con causas directas e indirectas y sus efectos.
+- Correspondencia entre causas y medios, problema central y objetivo SMART, efectos y fines.
+- Comparación de mejora local, infraestructura centralizada y redes con servicios cloud gestionados.
+- Gráficos descargables en PNG y SVG, y una versión en texto de cada árbol.
+- Metas propuestas y aspectos pendientes de validación diferenciados de las evidencias del diagnóstico.
+
+El contenido está en `app/data/project-analysis.json`. Para regenerar los gráficos después de editarlo:
+
+```bash
+node scripts/export-project-analysis.mjs
+```
 
 2. **2. Entradas e Insumos:**
    - Caso de Negocio (Business Case de equipamiento hardware y servicios cloud).
