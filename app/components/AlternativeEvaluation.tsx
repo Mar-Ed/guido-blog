@@ -8,7 +8,7 @@ export function AlternativeActions() {
         6.2. Identificación y organización de acciones en proyectos alternativos
       </h4>
       <p className="max-w-3xl text-sm leading-relaxed text-slate-600">
-        Las acciones de cada paquete permiten pasar de los medios del árbol de objetivos a una propuesta ejecutable. Se describen acciones previstas: la instalación y contratación se realizarían después de aprobar la factibilidad y la inversión.
+        Se agrupan las acciones comunes y específicas de cada alternativa. La ejecución depende de aprobar la factibilidad y la inversión.
       </p>
       <div className="rounded-xl border border-slate-200 bg-slate-50 p-5 sm:p-6">
         <h5 className="font-bold text-slate-900">Acciones comunes y complementarias</h5>
@@ -32,7 +32,7 @@ export function AlternativeActions() {
         ))}
       </div>
       <p className="max-w-3xl border-l-2 border-blue-300 pl-4 text-sm leading-relaxed text-slate-700">
-        <strong>Organización de las alternativas:</strong> cada paquete incorpora las acciones comunes una sola vez. A2 y A3 representan opciones distintas de infraestructura principal en este estudio; su elección se analiza por alternativa completa. La capacitación, los procedimientos y el respaldo complementan cualquiera de ellas.
+        <strong>Organización:</strong> cada paquete incluye las acciones comunes. A2 y A3 son opciones de infraestructura principal; capacitación, procedimientos y respaldo son complementarios.
       </p>
     </section>
   );

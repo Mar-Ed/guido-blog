@@ -1,40 +1,40 @@
 {
   "commonActions": [
-    "Levantar los puestos, equipos, distancias, acceso a Internet y registros de inventario y ventas utilizados en almacén y tienda.",
-    "Definir los datos, responsables y verificaciones de entradas, salidas, ventas y comprobantes electrónicos.",
-    "Solicitar cotizaciones comparables y acordar el alcance, la cobertura y el periodo de evaluación con la gerencia.",
-    "Preparar capacitación y pruebas de conectividad, registro, respaldo y recuperación."
+    "Revisar equipos, conectividad y registros de almacén y tienda.",
+    "Definir responsables y controles de inventario, ventas y comprobantes.",
+    "Cotizar y acordar el alcance con gerencia.",
+    "Planificar capacitación, pruebas y respaldos."
   ],
   "actionGroups": [
     {
       "id": "A1",
       "actions": [
-        "A1.1. Determinar qué equipos pueden reutilizarse y qué adecuaciones necesita la red local.",
-        "A1.2. Unificar formatos de registro, organizar archivos y definir su respaldo y conciliación.",
-        "A1.3. Capacitar al personal y comprobar la consistencia de los registros y el intercambio entre áreas."
+        "A1.1. Identificar equipos reutilizables y ajustes de red.",
+        "A1.2. Unificar registros y organizar respaldos.",
+        "A1.3. Capacitar y verificar la conciliación entre áreas."
       ],
-      "deliverable": "Plan de adecuaciones y procedimientos, con pruebas de conciliación y sus limitaciones de integración documentadas.",
-      "owner": "Equipo formulador y responsables de almacén y ventas; soporte técnico para las adecuaciones."
+      "deliverable": "Plan de mejoras y procedimientos, con límites de integración.",
+      "owner": "Equipo formulador, almacén, ventas y soporte técnico."
     },
     {
       "id": "A2",
       "actions": [
-        "A2.1. Dimensionar y cotizar servidor, red, UPS, copias de seguridad y acceso entre áreas.",
-        "A2.2. Definir la instalación y configuración de los recursos locales y las herramientas existentes compatibles.",
-        "A2.3. Planificar pruebas de acceso, registro y recuperación y la transferencia al responsable de soporte."
+        "A2.1. Dimensionar y cotizar servidor, red y UPS.",
+        "A2.2. Planificar la configuración de recursos y herramientas existentes.",
+        "A2.3. Definir pruebas de acceso, registro y recuperación."
       ],
-      "deliverable": "Diseño de infraestructura local, presupuesto, plan de respaldo y recuperación y protocolo de aceptación.",
-      "owner": "Equipo formulador y proveedor de infraestructura; gerencia designa al responsable de operación."
+      "deliverable": "Diseño local, presupuesto y plan de respaldo y aceptación.",
+      "owner": "Equipo formulador y proveedor de infraestructura."
     },
     {
       "id": "A3",
       "actions": [
-        "A3.1. Dimensionar cableado, Wi-Fi, Internet, puestos operativos y respaldo eléctrico.",
-        "A3.2. Comparar proveedores y definir la contratación y configuración de servicios cloud existentes compatibles con inventario, ventas y facturación.",
-        "A3.3. Planificar accesos, capacitación y pruebas del recorrido inventario–venta–comprobante, junto con respaldo y recuperación."
+        "A3.1. Dimensionar red, Internet, equipos y respaldo eléctrico.",
+        "A3.2. Comparar servicios cloud para inventario, ventas y facturación.",
+        "A3.3. Planificar accesos, capacitación y pruebas de operación y recuperación."
       ],
-      "deliverable": "Diseño de red y servicios, cotizaciones, condiciones de soporte y continuidad y protocolo de aceptación.",
-      "owner": "Equipo formulador, proveedor de redes y proveedor cloud; usuarios de almacén y ventas validan la operación."
+      "deliverable": "Diseño de red y cloud, cotizaciones y condiciones de soporte.",
+      "owner": "Equipo formulador, proveedores de redes y cloud y usuarios."
     }
   ],
   "admissionRequirements": [
