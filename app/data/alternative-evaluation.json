@@ -80,17 +80,17 @@
     {
       "id": "A1",
       "status": "Alcance parcial",
-      "text": "Ordena los registros y aprovecha equipos disponibles, pero debe demostrar cómo satisface el acceso y la consulta entre ambas áreas. Si no cumple los requisitos mínimos, se conserva como mejora transitoria."
+      "text": "Aprovecha equipos y ordena registros. Su integración entre áreas es limitada; puede servir como mejora transitoria."
     },
     {
       "id": "A2",
       "status": "Factibilidad por contrastar",
-      "text": "Puede atender una operación centralizada si se confirma la conectividad y la compatibilidad de las herramientas. Requiere presupuestar soporte, respaldos, energía y reposición del servidor."
+      "text": "Centraliza recursos en un servidor propio. Requiere conectividad, respaldos y soporte local."
     },
     {
       "id": "A3",
       "status": "Prioridad de estudio",
-      "text": "Se corresponde con la propuesta de redes y cloud y el acceso desde ambas áreas. Debe acreditar compatibilidad, continuidad de Internet, costos recurrentes, recuperación de datos y soporte antes de seleccionarse."
+      "text": "Facilita el acceso desde ambas áreas. Requiere Internet, servicios compatibles y costos recurrentes sustentados."
     }
   ],
   "costItems": [

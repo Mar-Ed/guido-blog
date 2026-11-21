@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import analysis from "../data/project-analysis.json";
 import { AnalysisTreeGraphic, AlternativesGraphic, type AnalysisTree } from "./AnalysisGraphics";
-import AlternativeEvaluation, { AlternativeActions } from "./AlternativeEvaluation";
+import AlternativeEvaluation, { AlternativeActions, AnalysisDetails } from "./AlternativeEvaluation";
 
 const linkStyle = "inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-700 transition-colors hover:border-blue-300 hover:text-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600";
 
@@ -152,11 +152,15 @@ export default function ProjectAnalysis() {
               <p className="text-xs font-bold uppercase tracking-wider text-blue-700">{alternative.id} · {alternative.id === "A3" ? "Priorizar evaluación" : "Alternativa"}</p>
               <h5 className="mt-2 text-lg font-bold text-slate-900">{alternative.name}</h5>
               <p className="mt-3 text-sm leading-relaxed text-slate-700">{alternative.description}</p>
-              <dl className="mt-4 space-y-3 text-sm leading-relaxed">
+              <div className="mt-4">
+                <AnalysisDetails title="Ver aporte, limitación y costos">
+                  <dl className="space-y-3 text-sm leading-relaxed">
                 <div><dt className="font-semibold text-slate-900">Aporte esperado</dt><dd className="text-slate-700">{alternative.advantage}</dd></div>
                 <div><dt className="font-semibold text-slate-900">Limitación</dt><dd className="text-slate-700">{alternative.limitation}</dd></div>
                 <div><dt className="font-semibold text-slate-900">Evaluación económica</dt><dd className="text-slate-700">{alternative.cost}</dd></div>
-              </dl>
+                  </dl>
+                </AnalysisDetails>
+              </div>
             </article>
           ))}
         </div>

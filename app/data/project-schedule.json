@@ -1,0 +1,94 @@
+{
+  "software": "ProjectLibre",
+  "sourceUrl": "https://drive.google.com/drive/folders/1jEmmyDrWjCymvd98q0-Bu_jQ4eC5yn3S?usp=drive_link",
+  "general": {
+    "title": "Diagrama general del proyecto",
+    "description": "Vista conjunta de las fases y de los hitos de inicio y cierre.",
+    "src": "/gannt/gantt_general.png",
+    "width": 2548,
+    "height": 1254,
+    "alt": "Cronograma general de Inversiones Guido, del 4 de enero al 24 de marzo de 2027, con fases de gestión, diseño, adquisiciones, red, puestos operativos, cloud, capacitación y aceptación."
+  },
+  "phases": [
+    {
+      "code": "1.1",
+      "label": "Gestión",
+      "title": "Gestión del proyecto documentada",
+      "description": "Acta, planificación, presupuesto, riesgos, seguimiento y cierre del proyecto.",
+      "src": "/gannt/1.1.jpeg",
+      "width": 1600,
+      "height": 1061,
+      "alt": "Detalle de actividades de gestión: coordinación con gerencia, planes, interesados, riesgos, presupuesto, seguimiento e informe final."
+    },
+    {
+      "code": "1.2",
+      "label": "Diseño",
+      "title": "Diseño técnico aprobado",
+      "description": "Levantamiento de equipos y conectividad, requerimientos, diseño de red y evaluación de servicios cloud.",
+      "src": "/gannt/1.2.jpeg",
+      "width": 1600,
+      "height": 889,
+      "alt": "Detalle del diseño técnico: visitas, inventario de equipos, medición de Internet, puestos, red, UPS y selección de servicios cloud."
+    },
+    {
+      "code": "1.3",
+      "label": "Adquisiciones",
+      "title": "Servicios y equipos adquiridos",
+      "description": "Cotizaciones, contratación de Internet y cloud, compras y recepción de equipos.",
+      "src": "/gannt/1.3.jpeg",
+      "width": 1344,
+      "height": 756,
+      "alt": "Detalle de adquisiciones: propuestas y contratos de conectividad y cloud, comparación de proveedores, órdenes de compra y recepción de equipos."
+    },
+    {
+      "code": "1.4",
+      "label": "Red y enlace",
+      "title": "Red local y enlace operativos",
+      "description": "Cableado, equipos de red, enlace entre áreas, seguridad, UPS y pruebas de conectividad.",
+      "src": "/gannt/1.4.jpeg",
+      "width": 1344,
+      "height": 756,
+      "alt": "Detalle de la instalación de cableado, puntos de red, switches, router, Wi-Fi, enlace seguro y respaldo eléctrico, con pruebas e informe."
+    },
+    {
+      "code": "1.5",
+      "label": "Puestos",
+      "title": "Puestos operativos equipados",
+      "description": "Instalación de puestos, lectoras e impresoras y codificación y etiquetado de productos.",
+      "src": "/gannt/1.5.jpeg",
+      "width": 1600,
+      "height": 775,
+      "alt": "Detalle del equipamiento de puestos: conexión a red y cloud, lectoras, impresoras, codificación y etiquetas. La captura muestra fechas de noviembre y diciembre."
+    },
+    {
+      "code": "1.6",
+      "label": "Servicios cloud",
+      "title": "Servicios cloud configurados",
+      "description": "Usuarios y permisos, carga de inventario, ventas, emisión electrónica, copias y recuperación.",
+      "src": "/gannt/1.6.jpeg",
+      "width": 1600,
+      "height": 1051,
+      "alt": "Detalle de la configuración cloud: accesos, carga y conciliación de stock, registros, comprobantes y respaldos. La captura muestra fechas de noviembre y diciembre."
+    },
+    {
+      "code": "1.7",
+      "label": "Capacitación",
+      "title": "Procedimientos y personal capacitado",
+      "description": "Formatos, procedimientos, responsabilidades, capacitación y guías de operación.",
+      "src": "/gannt/1.7.jpeg",
+      "width": 1600,
+      "height": 748,
+      "alt": "Detalle de preparación de formatos, procedimientos de conciliación, capacitación en POS y cloud, práctica guiada y entrega de guías."
+    },
+    {
+      "code": "1.8",
+      "label": "Pruebas y aceptación",
+      "title": "Solución probada y aceptada",
+      "description": "Pruebas integrales, contingencias, operación asistida y aceptación por gerencia.",
+      "src": "/gannt/1.8.jpeg",
+      "width": 1600,
+      "height": 789,
+      "alt": "Detalle de pruebas de inventario, ventas y comprobantes, simulaciones de fallos, operación asistida, documentación y acta de aceptación."
+    }
+  ]
+}

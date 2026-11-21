@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import FirstInterview from './components/FirstInterview';
 import ProjectAnalysis from './components/ProjectAnalysis';
+import ProjectSchedule from './components/ProjectSchedule';
 
 export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -253,6 +254,18 @@ export default function Home() {
                 </li>
               ))}
             </ul>
+          </div>
+
+          {/* Cronograma del proyecto */}
+          <div className="px-4 mb-2">
+            <button
+              type="button"
+              onClick={() => scrollTo('cronograma-proyecto', 'cronograma')}
+              className={`flex min-h-12 w-full items-center gap-3 rounded-lg px-4 py-2.5 text-left text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 ${activeSection === 'cronograma' ? 'bg-blue-50 text-blue-700' : 'text-slate-700 hover:bg-slate-50'}`}
+            >
+              <i className="fas fa-chart-gantt w-5 text-center text-blue-700" aria-hidden="true"></i>
+              Cronograma Gantt
+            </button>
           </div>
 
           {/* 2. Entradas e Insumos */}
@@ -1081,6 +1094,10 @@ export default function Home() {
           <hr className="border-slate-200" />
 
           <ProjectAnalysis />
+
+          <hr className="border-slate-200" />
+
+          <ProjectSchedule />
 
           <hr className="border-slate-200" />
 

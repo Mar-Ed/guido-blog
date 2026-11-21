@@ -52,6 +52,13 @@ node scripts/export-project-analysis.mjs
 
 Las acciones organizadas y los criterios de evaluación están en `app/data/alternative-evaluation.json`. Las referencias metodológicas se enlazan en el apartado económico del blog.
 
+**Cronograma del proyecto — ProjectLibre:**
+
+- Diagrama general y los ocho detalles de fases, de 1.1 a 1.8, a partir de las imágenes de `public/gannt/`.
+- Acceso desde el menú lateral, navegación por fases, vista de cada imagen completa y descarga.
+- Cada gráfico referencia su elaboración en ProjectLibre y la [carpeta de Google Drive con los archivos del proyecto](https://drive.google.com/drive/folders/1jEmmyDrWjCymvd98q0-Bu_jQ4eC5yn3S?usp=drive_link).
+- Los títulos, descripciones, dimensiones y la referencia están en `app/data/project-schedule.json`. Las diferencias de fechas de las fases 1.5 y 1.6 se indican junto a la vista general.
+
 2. **2. Entradas e Insumos:**
    - Caso de Negocio (Business Case de equipamiento hardware y servicios cloud).
    - Factores Ambientales de la Empresa (EEF) y marco tributario SUNAT.
