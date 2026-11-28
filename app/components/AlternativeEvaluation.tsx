@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import analysis from "../data/project-analysis.json";
 import evaluation from "../data/alternative-evaluation.json";
+import ProjectCostEstimate from "./ProjectCostEstimate";
 
 export function AnalysisDetails({ title, children }: { title: string; children: ReactNode }) {
   return (
@@ -111,7 +112,7 @@ export default function AlternativeEvaluation() {
       <section id="analisis-economico" aria-labelledby="analisis-economico-titulo" className="scroll-mt-24 space-y-6">
         <div>
           <h4 id="analisis-economico-titulo" className="text-xl font-bold text-slate-900">7.2. Análisis costo-beneficio y costo-efectividad</h4>
-          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-600">Se comparan inversión, gastos de operación y resultados esperados durante un mismo periodo. Los importes e indicadores siguen pendientes de cotizaciones y mediciones.</p>
+          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-600">Se comparan inversión, gastos de operación y resultados esperados durante un mismo periodo. A3 cuenta con un presupuesto referencial en el apartado 7.3; las cotizaciones finales y los indicadores económicos requieren mediciones y validación.</p>
         </div>
 
         <AnalysisDetails title="Ver costos a cotizar y base de comparación">
@@ -162,6 +163,7 @@ export default function AlternativeEvaluation() {
           <p className="mt-5 border-t border-slate-100 pt-4 text-sm leading-relaxed text-slate-600">Estado de A1, A2 y A3: VAN, B/C y CE sin calcular. Con los datos sustentados se revisarán escenarios de menor beneficio, mayor costo recurrente, interrupciones de Internet y reposiciones. La gerencia podrá decidir sobre la alternativa y su sostenibilidad.</p>
         </AnalysisDetails>
       </section>
+      <ProjectCostEstimate />
     </section>
   );
 }

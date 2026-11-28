@@ -1,0 +1,58 @@
+{
+  "reviewedAt": "27 de noviembre de 2026",
+  "months": 12,
+  "hourlyRate": 60,
+  "defaultContingencyPercent": 10,
+  "scheduleReference": "https://claude.ai/share/0bd96e65-2c68-45ef-be06-54dd9d490c43",
+  "labor": [
+    { "phase": "1.1", "hours": 20, "duration": "8 días de planificación + 50 de seguimiento", "detail": "Acta, planes, presupuesto, coordinación, seguimiento y cierre." },
+    { "phase": "1.2", "hours": 16, "duration": "11 días hábiles", "detail": "Visita, inventario de equipos, mediciones y diseño de red y cloud." },
+    { "phase": "1.3", "hours": 8, "duration": "15 días hábiles", "detail": "Comparación de cotizaciones, coordinación de compras y recepción." },
+    { "phase": "1.4", "hours": 24, "duration": "12 días hábiles", "detail": "Cableado, puntos de red, router, Wi-Fi, UPS y pruebas del enlace local." },
+    { "phase": "1.5", "hours": 12, "duration": "10 días hábiles", "detail": "Preparación de puestos, lectoras, impresora y etiquetado inicial." },
+    { "phase": "1.6", "hours": 24, "duration": "25 días hábiles", "detail": "Configuración de servicios existentes, permisos, carga inicial de inventario, emisión y respaldo." },
+    { "phase": "1.7", "hours": 12, "duration": "11 días hábiles", "detail": "Procedimientos, guías y capacitación de usuarios de almacén y tienda." },
+    { "phase": "1.8", "hours": 16, "duration": "14 días hábiles", "detail": "Pruebas integrales, recuperación, operación asistida y aceptación." }
+  ],
+  "initialItems": [
+    { "id": "computers", "phase": "1.5", "name": "Computadoras con monitor, teclado y mouse", "quantity": 2, "unit": "equipo", "unitCost": 1900, "source": "pc", "basis": "Monto redondeado sobre una referencia comercial; especificaciones y licencias por confirmar." },
+    { "id": "router", "phase": "1.4", "name": "Router de red", "quantity": 1, "unit": "equipo", "unitCost": 300, "source": "", "basis": "Asignación de planificación; funciones de seguridad y modelo por cotizar." },
+    { "id": "switch", "phase": "1.4", "name": "Switch Gigabit de 16 puertos", "quantity": 1, "unit": "equipo", "unitCost": 200, "source": "", "basis": "Asignación de planificación para los puntos previstos; por cotizar." },
+    { "id": "wifi", "phase": "1.4", "name": "Puntos de acceso Wi-Fi", "quantity": 2, "unit": "equipo", "unitCost": 300, "source": "wifi", "basis": "Monto referencial redondeado; ubicación, cobertura y compatibilidad por verificar." },
+    { "id": "ups", "phase": "1.4", "name": "UPS para puestos y equipos de red", "quantity": 2, "unit": "equipo", "unitCost": 350, "source": "", "basis": "Asignación de planificación; dimensionar potencia y autonomía según carga real." },
+    { "id": "scanners", "phase": "1.5", "name": "Lectoras de códigos de barras USB", "quantity": 2, "unit": "equipo", "unitCost": 180, "source": "scanner", "basis": "Monto referencial redondeado; probar compatibilidad con el servicio cloud." },
+    { "id": "printer", "phase": "1.5", "name": "Impresora térmica de comprobantes de 80 mm", "quantity": 1, "unit": "equipo", "unitCost": 350, "source": "printer", "basis": "Asignación basada en una referencia comercial; verificar conexión e impresión desde el servicio contratado." },
+    { "id": "cable", "phase": "1.4", "name": "Cable UTP Cat 6", "quantity": 100, "unit": "metro", "unitCost": 2.5, "source": "", "basis": "Metrado y precio estimados; validar distancias y calidad en visita técnica." },
+    { "id": "outlets", "phase": "1.4", "name": "Puntos: jacks, placas y patch cords", "quantity": 8, "unit": "punto", "unitCost": 35, "source": "", "basis": "Materiales por punto; la mano de obra se cuenta en la fase 1.4." },
+    { "id": "raceways", "phase": "1.4", "name": "Canaletas y fijaciones", "quantity": 50, "unit": "metro", "unitCost": 6, "source": "", "basis": "Metrado y precio estimados; sin obras civiles." },
+    { "id": "adapters", "phase": "1.4", "name": "Adaptadores y alimentación de puntos Wi-Fi", "quantity": 1, "unit": "lote", "unitCost": 100, "source": "", "basis": "Asignación para inyectores o accesorios que no incluya el equipo." },
+    { "id": "labels", "phase": "1.5", "name": "Rollos iniciales y etiquetas de productos", "quantity": 1, "unit": "lote", "unitCost": 150, "source": "", "basis": "Etiquetas iniciales impresas por un tercero; no se incluye una impresora de etiquetas dedicada." },
+    { "id": "transport", "phase": "1.3", "name": "Fletes y traslado de equipos", "quantity": 1, "unit": "lote", "unitCost": 150, "source": "", "basis": "Asignación de planificación sujeta a la entrega acordada con proveedores." }
+  ],
+  "monthlyItems": [
+    { "id": "cloud", "name": "Servicio cloud de inventario, ventas y emisión electrónica", "quantity": 1, "unitCost": 93, "basis": "Referencia de Alegra POS PYME, IGV incluido; validar límites y cobertura funcional antes de contratar.", "source": "cloud" },
+    { "id": "internet", "name": "Conexión a Internet compartida", "quantity": 1, "unitCost": 150, "basis": "Supuesto para un local; tarifa, cobertura, instalación y condiciones empresariales por cotizar.", "source": "" },
+    { "id": "support", "name": "Soporte técnico local preventivo", "quantity": 2, "unitCost": 60, "basis": "Dos horas al mes a tarifa estimada; distinto del soporte incluido por el proveedor cloud.", "source": "" },
+    { "id": "energy", "name": "Electricidad adicional", "quantity": 1, "unitCost": 40, "basis": "Asignación mensual; medir consumo y aplicar la tarifa efectiva de la empresa.", "source": "" },
+    { "id": "consumables", "name": "Papel térmico y reposición de etiquetas", "quantity": 1, "unitCost": 40, "basis": "Asignación mensual según volumen de operación por validar.", "source": "" },
+    { "id": "backup", "name": "Almacenamiento de copias exportadas", "quantity": 1, "unitCost": 30, "basis": "Asignación mensual; verificar exportación, capacidad, protección y recuperación del servicio.", "source": "" }
+  ],
+  "sources": [
+    { "id": "cloud", "name": "Alegra Perú · precios de Punto de Venta", "url": "https://www.alegra.com/peru/punto-venta/precios/", "detail": "Plan PYME publicado a S/ 93 al mes, con IGV, dos bodegas, dos usuarios operativos y hasta 1 000 facturas y boletas electrónicas. Es una referencia de costo, pendiente de prueba funcional." },
+    { "id": "pc", "name": "CyberMarket · computadora con monitor", "url": "https://www.cybermarket.pe/p/pc-intel-core-i3-10100/", "detail": "Referencia publicada de S/ 1 899 por equipo con monitor. Presupuesto redondeado a S/ 1 900; modelo, sistema operativo, licencias e impuestos por confirmar en cotización." },
+    { "id": "wifi", "name": "Memory Kings · puntos de acceso Omada", "url": "https://www.memorykings.pe/filtros/522/omada-by-tp-link-business-networking", "detail": "Referencia consultada EAP225 a S/ 254; se asignan S/ 300 por punto Wi-Fi. Confirmar stock, impuestos y accesorios." },
+    { "id": "scanner", "name": "Memory Kings · lectoras de códigos", "url": "https://www.memorykings.pe/listados/931/lector-codigo-de-barras-1d-2d-qr", "detail": "Referencia consultada SC415 USB a S/ 159,50; se asignan S/ 180 por lectora. Confirmar impuestos y compatibilidad." },
+    { "id": "printer", "name": "Memory Kings · impresora térmica USB y red", "url": "https://www.memorykings.pe/producto/355446/impresora-termica-sat-q22ub-usb-ethernet", "detail": "Página consultada con precio regular de S/ 262,50, IGV incluido y sin flete. Se asignan S/ 350; confirmar precio y modelo vigentes, sin depender de una promoción." }
+  ],
+  "assumptions": [
+    "Escenario A3 para dos puestos operativos: uno en almacén y otro en tienda, dos lectoras y una impresora de comprobantes. Son cantidades propuestas, no un inventario confirmado.",
+    "Almacén y tienda dentro de un mismo local, con ocho puntos de red, unos 100 m de cable y una conexión a Internet. Si se trata de inmuebles separados, habrá que cotizar el enlace entre sedes y la conectividad adicional.",
+    "Las ocho fases siguen el cronograma del 4 de enero al 24 de marzo de 2027. Las duraciones de fase son estimaciones de calendario laboral de la conversación compartida; las 132 horas-persona y la tarifa de S/ 60 son supuestos nuevos del presupuesto, sujetos a validación técnica.",
+    "Se consideran desembolsos brutos en soles, suponiendo impuestos incluidos en las asignaciones. No se añade IGV otra vez ni se descuenta crédito fiscal. Cada proveedor deberá confirmar el tratamiento tributario, flete, garantías y licencias.",
+    "La reserva se aplica solo al costo directo inicial. Se presupuestan además doce mensualidades completas desde la primera activación, incluso si parte del servicio se usa durante la implementación. No se vuelven a cargar suscripciones en las fases.",
+    "Precios constantes durante doce meses. La reutilización de computadoras elimina únicamente su compra, tras verificar su estado, seguridad y compatibilidad; no reduce horas de preparación, red ni periféricos.",
+    "La gerencia y los usuarios aportan validación de datos y participación en las sesiones. Su costo de oportunidad no se ha monetizado. La estimación remunera horas de servicios TI y no representa personal contratado a tiempo completo durante las doce semanas.",
+    "La carga inicial se prevé dentro de las 24 horas de configuración cloud, con datos preparados por la empresa. El número de productos y el estado de los registros deben medirse; si requieren más depuración o digitación, se ajustará el esfuerzo antes de contratar."
+  ],
+  "exclusions": "No se han cuantificado obras civiles, instalaciones eléctricas mayores, enlace externo entre inmuebles, segundo proveedor de Internet, comisiones por pagos con tarjeta, equipos adicionales, reposiciones ni licencias adicionales que exija el diagnóstico. Son costos por cotizar si aplican; no deben cubrirse automáticamente con la reserva. Se contratan y configuran servicios existentes, sin desarrollo de software a medida."
+}

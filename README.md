@@ -42,7 +42,8 @@ El proyecto aborda el **Proceso de Identificación de Stakeholders** basado en e
 - Metas propuestas y aspectos pendientes de validación diferenciados de las evidencias del diagnóstico.
 - **6.2. Identificación y organización de acciones:** acciones comunes y paquetes específicos de A1, A2 y A3, entregables y responsables propuestos.
 - **7. Evaluación y justificación de alternativas**, con requisitos mínimos y comparación cualitativa en **7.1**, más una ponderación propuesta pendiente de calificaciones sustentadas.
-- **7.2. Análisis costo-beneficio y costo-efectividad:** costos y beneficios por medir, fórmulas de VAN, B/C y CE, y datos necesarios para calcularlos. Los importes y resultados económicos permanecen pendientes de cotización y medición.
+- **7.2. Análisis costo-beneficio y costo-efectividad:** fórmulas de VAN, B/C y CE y datos necesarios para calcularlos. Los resultados económicos permanecen pendientes de cotizaciones finales y medición de beneficios y efectos.
+- **7.3. Estimación de costos:** presupuesto referencial de A3 por las ocho fases del Gantt, inversión inicial, reserva y doce mensualidades. Incluye cantidades, horas-persona propuestas, fuentes comerciales y supuestos; permite simular la reutilización de computadoras y modificar la reserva.
 
 El contenido está en `app/data/project-analysis.json`. Para regenerar los gráficos después de editarlo:
 
@@ -51,6 +52,14 @@ node scripts/export-project-analysis.mjs
 ```
 
 Las acciones organizadas y los criterios de evaluación están en `app/data/alternative-evaluation.json`. Las referencias metodológicas se enlazan en el apartado económico del blog.
+
+El presupuesto está en `app/data/project-costs.json` y su cálculo en `app/lib/project-costs.ts`. El escenario base supone dos puestos en un mismo local, 132 horas-persona a S/ 60, una reserva de 10 % y precios constantes: S/ 17 006 de implementación con reserva, S/ 473 al mes y S/ 22 682 por implementación más doce mensualidades. Las duraciones de la [conversación compartida en Claude](https://claude.ai/share/0bd96e65-2c68-45ef-be06-54dd9d490c43) sirven de referencia de fases; las horas y tarifas son supuestos nuevos, no una cotización ni jornadas completas de todas las semanas del Gantt. Antes de aprobar, confirmar diagnóstico, licencias, conectividad entre áreas, impuestos y precios con proveedores. No se calcula rentabilidad con beneficios inventados.
+
+Para verificar los cálculos del presupuesto:
+
+```bash
+node --test scripts/project-costs.test.mjs
+```
 
 **Cronograma del proyecto — ProjectLibre:**
 
